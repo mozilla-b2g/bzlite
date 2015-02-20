@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  font-family: Fira Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  background: #EFEFEF;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+input, textarea, .btn {
+  width: 100%;
+  display: block;
+  border: 0;
+  border: 1px solid #CCC;
+  padding: 10px;
+  background: #FFF;
+  text-decoration: none;
+}
+
+.btn {
+  text-align: center;
+}
+
+label {
+  display: block;
+}
+
+input, textarea, select, .btn {
+  margin-bottom: 15px;
+}
+
+input:focus, textarea:focus {
+  border-bottom: 1px solid #00AACC;
+}
+
+input[type=submit], .btn {
+  display: block;
+  font-style: italic;
+  background: #00AACC;
+  color: white;
+  border-radius: 2em;
+  border: 0;
+}
+
+input[type=search] {
+  border-radius: 2em;
+  text-indent: 1.2em;
+  background-image: url(/style/icons/noun_15028.svg);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 2em;
+  width: calc(100% - 2rem);
+  margin: 0 1rem 1rem 1rem;
+}
+
+::-moz-placeholder {
+  font-style: italic;
+  color: #CCC;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: .5rem;
+}
+
+.title, .details {
+  padding: 0 .5rem;
+}
+
+.details, .bugNavigation, .comments div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.details span {
+  font-size: .8rem;
+}
+
+.bugs a {
+  display: block;
+  padding: .7rem .5rem;
+  text-decoration: none;
+  color: #666;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+
+.bugs a:hover {
+  background: #DDD;
+}
+
+.comments {
+  list-style-type: none;
+  padding: 0 .5rem;
+}
+
+.comments div span {
+  color: #999;
+  font-size: .8rem;
+}
+
+.comments p {
+  margin-top: 0;
+}
+
+.bugs {
+  min-height: 2rem;
+}
+
+.loading {
+  background: url(/style/icons/loading.png) no-repeat center;
+  animation: 0.9s rotate infinite steps(30);
+}
+
+#createBug, #login, .dashboard {
+  padding: 0 .5rem;
+}
+
+.home h2 a {
+  display: block;
+  margin: 1rem;
+  background: #E0E0E0;
+  padding: .5rem;
+  text-decoration: none;
+  color: #333;
+  border-radius: .5rem;
+  font-weight: normal;
+  border: 1px solid #CCC;
+  text-indent: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 2em;
+}
+
+.home .search {
+  background-image: url(/style/icons/noun_15028.svg);
+}
+
+.home .file {
+  background-image: url(/style/icons/noun_9529.svg);
+  background-size: 1em;
+  background-position: .5rem center;
+}
+
+.warning {
+  background: #B90000;
+}
+
+.loginError, .createBugError {
+  padding: .5rem;
+  border-radius: .5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+em {
+  font-weight: bold;
+}
+
+[hidden] {
+  display: none;
+}
+
+@keyframes rotate {
+  from { transform: rotate(1deg); }
+  to   { transform: rotate(360deg); }
+}
