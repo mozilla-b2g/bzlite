@@ -17,7 +17,10 @@ var tpl = require('./template.js');
 inherits(App, EE);
 function App() {
   EE.call(this);
-  this.bugzilla = bz.createClient({test: true});
+  this.bugzilla = bz.createClient({
+    apiKey: '3FQgqFTso7ca3JdONgInAaD3dsH4oXggucpJg7xM',
+    test: true
+  });
 }
 
 App.prototype.init = function() {
@@ -115,6 +118,10 @@ function Bz(opts) {
     this.password = opts.password;
   }
 
+  if (opts.apiKey) {
+    this.apiKey = opts.apiKey;
+  }
+
   this.apiUrl = opts.url || (opts.test ? TEST_API_URL : API_URL);
 }
 
@@ -135,6 +142,8 @@ Bz.prototype.request = function(method, url, data, params) {
   } else if (this.username && this.password) {
     opts.qs.username = this.username;
     opts.qs.password = this.password;
+  } else if (this.apiKey) {
+    opts.qs.api_key = this.apiKey;
   }
 
   return new Promise((function(resolve, reject) {

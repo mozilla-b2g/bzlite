@@ -1,6 +1,6 @@
 <div>
 
-  <div class="bugNavigation">
+  <div class="bugNavigation" hidden>
     <a href="comments/">Comments</a>
     <a href="comments/">Details</a>
     <a href="comments/">Attachments</a>
