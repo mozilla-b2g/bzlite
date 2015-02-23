@@ -9,5 +9,9 @@
   "icons": {
     "512": "/style/icons/app-512.png",
     "128": "/style/icons/app-128.png"
+  },
+  "activities": {
+    "share": {
+    }
   }
 }

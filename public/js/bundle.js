@@ -66,6 +66,18 @@ app.on('logout', function(name) {
   el.href = '/login/';
 });
 
+if (navigator.mozSetMessageHandler) {
+  navigator.mozSetMessageHandler('activity', function(activityRequest) {
+    console.log('HANDLING ACTIVITY');
+    var option = activityRequest.source;
+    console.log(option);
+
+    if (option.name === 'share') {
+      document.location.href = '/create/';
+    }
+  });
+}
+
 app.init();
 
 var views = {
