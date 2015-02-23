@@ -1,0 +1,13 @@
+{
+  "version": "0.1",
+  "name": "LadyBugs",
+  "description": "File the bugs",
+  "developer": {
+    "name": "Dale Harvey",
+    "url": "http://yourawesomeapp.com"
+  },
+  "icons": {
+    "512": "/style/icons/app-512.png",
+    "128": "/style/icons/app-128.png"
+  }
+}

@@ -20,6 +20,11 @@ input, textarea, .btn {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .btn {
   text-align: center;
 }
@@ -138,6 +143,7 @@ header {
   background-repeat: no-repeat;
   background-position: 0 center;
   background-size: 2em;
+  cursor: pointer;
 }
 
 .home .search {
@@ -147,6 +153,12 @@ header {
 .home .file {
   background-image: url(/style/icons/noun_9529.svg);
   background-size: 1em;
+  background-position: .5rem center;
+}
+
+.home .install a {
+  background-image: url(/style/icons/noun_4240.svg);
+  background-size: 1.2em;
   background-position: .5rem center;
 }
 
@@ -168,6 +180,38 @@ em {
 
 [hidden] {
   display: none;
+}
+
+.attachments li {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #DDD;
+}
+
+.attachments li:last-child {
+  border-bottom: 0;
+}
+
+.attachments li span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3rem;
+}
+
+.deleteAttachment {
+  display: block;
+  background: url(/style/icons/noun_5493.svg) no-repeat;
+  background-size: 100%;
+  width: 1.3rem;
+  height: 1.3rem;
+  opacity: .5;
+  flex-shrink: 0;
+}
+
+.deleteAttachment:hover {
+  opacity: .75;
 }
 
 @keyframes rotate {

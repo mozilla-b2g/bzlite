@@ -66,6 +66,7 @@ app.on('logout', function(name) {
 app.init();
 
 var views = {
+  'home': require('./views/home.js')(app),
   'search': require('./views/search.js')(app),
   'create_bug': require('./views/create-bug.js')(app),
   'view_bug': require('./views/bug.js')(app),
@@ -83,7 +84,7 @@ function render(to, view) {
   };
 }
 
-page('/', render('content', '/views/home.tpl'));
+page('/', render('content', views.home));
 
 page('/login/', render('content', views.login));
 page('/logout/', app.logout.bind(app));
@@ -97,7 +98,7 @@ page('/search/:search', render('content', views.search));
 
 page();
 
-},{"./bz.js":"/Users/daleharvey/src/ladybug/lib/bz.js","./template.js":"/Users/daleharvey/src/ladybug/lib/template.js","./views/bug.js":"/Users/daleharvey/src/ladybug/lib/views/bug.js","./views/create-bug.js":"/Users/daleharvey/src/ladybug/lib/views/create-bug.js","./views/login.js":"/Users/daleharvey/src/ladybug/lib/views/login.js","./views/search.js":"/Users/daleharvey/src/ladybug/lib/views/search.js","events":"/Users/daleharvey/src/ladybug/node_modules/browserify/node_modules/events/events.js","inherits":"/Users/daleharvey/src/ladybug/node_modules/inherits/inherits_browser.js","page":"/Users/daleharvey/src/ladybug/node_modules/page/index.js"}],"/Users/daleharvey/src/ladybug/lib/bz.js":[function(require,module,exports){
+},{"./bz.js":"/Users/daleharvey/src/ladybug/lib/bz.js","./template.js":"/Users/daleharvey/src/ladybug/lib/template.js","./views/bug.js":"/Users/daleharvey/src/ladybug/lib/views/bug.js","./views/create-bug.js":"/Users/daleharvey/src/ladybug/lib/views/create-bug.js","./views/home.js":"/Users/daleharvey/src/ladybug/lib/views/home.js","./views/login.js":"/Users/daleharvey/src/ladybug/lib/views/login.js","./views/search.js":"/Users/daleharvey/src/ladybug/lib/views/search.js","events":"/Users/daleharvey/src/ladybug/node_modules/browserify/node_modules/events/events.js","inherits":"/Users/daleharvey/src/ladybug/node_modules/inherits/inherits_browser.js","page":"/Users/daleharvey/src/ladybug/node_modules/page/index.js"}],"/Users/daleharvey/src/ladybug/lib/bz.js":[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -192,6 +193,10 @@ Bz.prototype.getProducts = function() {
   return this.request('GET', '/rest/product_accessible');
 };
 
+// Attachments
+Bz.prototype.createAttachment = function (id, data) {
+  return this.request('POST', '/bug/' + id + '/attachment', data);
+};
 
 module.exports.createClient = function(opts) {
   return new Bz(opts);
@@ -449,10 +454,55 @@ module.exports = function (app) {
 
 var tpl = require('../template.js');
 
-var app, form;
+var form;
+var attachments = [];
 
 function value(selector) {
   return document.querySelector(selector).value.trim();
+}
+
+function deleteAttachment(e) {
+  attachments = attachments.filter(function(file) {
+    return file.name !== e.target.dataset.name;
+  });
+  drawAttachments();
+};
+
+function drawAttachments() {
+  var frag = document.createDocumentFragment();
+  attachments.map(function(file) {
+    var li = document.createElement('li');
+    var span = document.createElement('span');
+    var btn = document.createElement('a');
+    btn.classList.add('deleteAttachment');
+    btn.dataset.name = file.name;
+    btn.addEventListener('click', deleteAttachment);
+    span.textContent = file.name;
+    li.appendChild(span);
+    li.appendChild(btn);
+    frag.appendChild(li);
+  });
+  form.querySelector('.attachments').innerHTML = '';
+  form.querySelector('.attachments').appendChild(frag);
+}
+
+function inputChanged(e) {
+  var files = e.target.files;
+  for (var i = 0; i < files.length; i++) {
+    var file = files.item(i);
+    var reader = new FileReader();
+    reader.onload = (function(theFile) {
+      return function(e) {
+        attachments.push({
+          name: theFile.name,
+          type: theFile.type,
+          data: e.target.result.split(',')[1]
+        });
+        drawAttachments();
+      }
+    })(file);
+    reader.readAsDataURL(file);
+  }
 }
 
 function formSubmitted(e) {
@@ -467,8 +517,19 @@ function formSubmitted(e) {
     description: value('#description'),
     version: 'unspecified'
   }).then(function(result) {
-    document.location.href = '/bug/' + result.id;
-  }).catch(function() {
+    var id = result.id;
+    Promise.all(attachments.map(function(file) {
+      return this.app.bugzilla.createAttachment(id, {
+        ids: [id],
+        data: file.data,
+        file_name: file.name,
+        summary: file.name,
+        content_type: file.type
+      });
+    }.bind(this))).then(function() {
+      document.location.href = '/bug/' + result.id;
+    });
+  }.bind(this)).catch(function() {
     form.querySelector('.createBugError').hidden = false;
   });
 }
@@ -480,6 +541,8 @@ function CreateBug(app) {
 CreateBug.prototype.render = function(args) {
   return tpl.read('/views/create_bug.tpl').then((function(_form) {
     form = _form;
+    form.querySelector('input[type=file]')
+      .addEventListener('change', inputChanged.bind(this));
     form.addEventListener('submit', formSubmitted.bind(this));
     return form;
   }).bind(this));
@@ -487,6 +550,45 @@ CreateBug.prototype.render = function(args) {
 
 module.exports = function (app) {
   return new CreateBug(app);
+};
+
+},{"../template.js":"/Users/daleharvey/src/ladybug/lib/template.js"}],"/Users/daleharvey/src/ladybug/lib/views/home.js":[function(require,module,exports){
+'use strict';
+
+var tpl = require('../template.js');
+
+var manifestUrl = location.href + 'manifest.webapp';
+
+function install() {
+  var installReq = navigator.mozApps.install(manifestUrl);
+  installReq.onsuccess = function(data) {
+    document.location.href = '/';
+  };
+}
+
+function Home(app) {};
+
+Home.prototype.render = function(args) {
+  return tpl.read('/views/home.tpl').then((function(form) {
+    if (!navigator.mozApps) {
+      return form;
+    }
+    return new Promise(function(resolve) {
+      var installCheck = navigator.mozApps.checkInstalled(manifestUrl)
+      installCheck.onsuccess = function() {
+        if (!installCheck.result) {
+          var button = form.querySelector('.install');
+          button.addEventListener('click', install, false);
+          button.removeAttribute('hidden');
+        }
+        resolve(form);
+      };
+    });
+  }).bind(this));
+};
+
+module.exports = function (app) {
+  return new Home(app);
 };
 
 },{"../template.js":"/Users/daleharvey/src/ladybug/lib/template.js"}],"/Users/daleharvey/src/ladybug/lib/views/login.js":[function(require,module,exports){
