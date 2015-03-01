@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/*_test.js",
     "watch": "watchify index.js -o public/js/bundle.js -v",
     "build": "mkdir -p public/js && browserify index.js > public/js/bundle.js",
     "start": "npm run watch & nodemon lib/server.js"
@@ -24,6 +24,9 @@
     "lie": "^2.8.1",
     "inherits": "^2.0.1",
     "page": "^1.6.1",
-    "timeago": "^0.2.0"
+    "timeago": "^0.2.0",
+    "selenium-standalone": "^4.1.0",
+    "mocha": "^2.1.0",
+    "wd": "^0.3.11"
   }
 }
