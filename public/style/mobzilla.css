@@ -87,7 +87,7 @@ header {
   font-size: .8rem;
 }
 
-.bugs a, .assigned a {
+.bugs a, .dashboard a {
   display: block;
   padding: .7rem .5rem;
   text-decoration: none;
