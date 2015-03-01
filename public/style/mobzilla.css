@@ -133,6 +133,7 @@ header {
 }
 
 .loading {
+  min-height: 4rem;
   background: url(/style/icons/loading.png) no-repeat center;
   animation: 0.9s rotate infinite steps(30);
 }
