@@ -26,7 +26,7 @@ function startSelenium(callback) {
 
 describe('Basic Tests', function() {
 
-  before(function(done) {
+  before(function() {
     return server.init(3035).then(function(_instance) {
       instance = _instance;
     });
