@@ -172,12 +172,19 @@ header {
   padding: .5rem;
 }
 
-.dashboard a:hover {
-  background: #DDD;
+.dashboard ul a {
+  background: #FFF;
+}
+
+.dashboard ul a:hover {
+  background: #EFEFEF;
+}
+
+.dashboard ul {
+  font-size: .8rem;
 }
 
 .dashboard ul a div  {
-  font-size: .75rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -186,6 +193,11 @@ header {
 
 .dashboard ul {
   border-top: 1px solid #DDD;
+}
+
+.dashboard .btn {
+  margin: 1rem;
+  width: calc(100% - 2rem);
 }
 
 .home .search {
@@ -228,7 +240,6 @@ em {
   padding: 5px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   border-bottom: 1px solid #DDD;
 }
 
@@ -236,10 +247,18 @@ em {
   border-bottom: 0;
 }
 
+.attachments img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: .5rem;
+}
+
 .attachments li span {
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.3rem;
+  line-height: 2rem;
+  font-size: .8rem;
+  flex-grow: 1;
 }
 
 .deleteAttachment {
@@ -248,6 +267,7 @@ em {
   background-size: 100%;
   width: 1.3rem;
   height: 1.3rem;
+  margin-top: .45rem;
   opacity: .5;
   flex-shrink: 0;
 }
