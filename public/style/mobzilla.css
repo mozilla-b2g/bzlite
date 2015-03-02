@@ -7,6 +7,9 @@ body {
   background: #EFEFEF;
   overflow-x: hidden;
   margin: 0;
+}
+
+body, input {
   font-size: 1rem;
 }
 
