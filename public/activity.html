@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <a id="test">Click Me!!!!</a>
+    <script>
+      var el = document.getElementById('test');
+      el.addEventListener('click', function() {
+
+        var aFileParts = ['heyo some tesxt here'];
+        var oMyBlob = new Blob(aFileParts, {type : 'text/plain'});
+
+        new MozActivity({
+          name: 'share',
+          data: {
+            blobs: [oMyBlob, oMyBlob],
+            filenames: ['afilename', 'anotherfilename']
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
