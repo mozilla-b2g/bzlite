@@ -3,6 +3,11 @@
   font-family: Fira Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+body[data-version="1"] [data-version="2"],
+body[data-version="2"] [data-version="1"] {
+  display: none;
+}
+
 body {
   background: #EFEFEF;
   overflow-x: hidden;
