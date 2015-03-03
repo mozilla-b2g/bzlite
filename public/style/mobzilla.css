@@ -285,6 +285,18 @@ em {
   opacity: .75;
 }
 
+.preview {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 @keyframes rotate {
   from { transform: rotate(1deg); }
   to   { transform: rotate(360deg); }
