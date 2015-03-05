@@ -1,19 +1,21 @@
 <div class="dashboard">
 
-  <h2>Assigned</h2>
-  <ul class="assigned">
-    <li class="loading"></li>
-  </ul>
+  <div class="loading"></div>
 
-  <h2>Flags Requested of You</h2>
-  <ul class="yourFlags">
-    <li class="loading"></li>
-  </ul>
+  <div class="assigned" hidden>
+    <h2>Assigned</h2>
+    <ul></ul>
+  </div>
 
-  <h2>Flags You Have Requested</h2>
-  <ul class="theirFlags">
-    <li class="loading"></li>
-  </ul>
+  <div class="yourFlags" hidden>
+    <h2>Flags Requested of You</h2>
+    <ul></ul>
+  </div>
+
+  <div class="theirFlags" hidden>
+    <h2>Flags You Have Requested</h2>
+    <ul></ul>
+  </div>
 
   <a href="/logout/" class="btn warning">Logout</a>
 
