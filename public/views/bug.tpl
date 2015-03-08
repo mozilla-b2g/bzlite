@@ -1,11 +1,5 @@
 <div>
 
-  <div class="bugNavigation" hidden>
-    <a href="comments/">Comments</a>
-    <a href="comments/">Details</a>
-    <a href="comments/">Attachments</a>
-  </div>
-
   <h2 class="title"></h2>
 
   <div class="details">
@@ -13,6 +7,12 @@
     <span class="assigned"></span>
   </div>
 
-  <ul class="comments"></ul>
+  <div class="bugNavigation">
+    <a class="commentsUrl">Comments</a>
+    <a class="detailsUrl">Details</a>
+    <a class="attachUrl">Attachments</a>
+  </div>
+
+  <div id="bugContent"></div>
 
 </div>

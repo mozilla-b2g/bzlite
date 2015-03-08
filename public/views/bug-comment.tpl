@@ -1,5 +1,5 @@
 <li>
-  <div>
+  <div class="header">
     <span class="author"></span>
     <span class="created"></span>
   </div>

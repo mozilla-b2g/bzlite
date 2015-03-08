@@ -15,7 +15,7 @@ body {
 }
 
 body, input {
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 a {
@@ -41,7 +41,7 @@ ul {
 
 h2 {
   font-size: 1rem;
-  margin-top: 0;
+  margin: 0;
 }
 
 .btn {
@@ -102,6 +102,21 @@ header {
   justify-content: space-between;
 }
 
+.bugNavigation {
+  background: #999;
+  margin: .5rem 0 0rem 0;
+}
+
+.bugNavigation a {
+  padding: .5rem;
+  color: #EEE;
+  cursor: pointer;
+}
+
+.bugNavigation a:hover {
+  background: #666;
+}
+
 .details span {
   font-size: .8rem;
 }
@@ -124,7 +139,10 @@ header {
 
 .comments {
   list-style-type: none;
-  padding: 0 .5rem;
+}
+
+.comments .header {
+  padding: .5rem;
 }
 
 .comments div span {
@@ -133,7 +151,12 @@ header {
 }
 
 .comments p {
-  margin-top: 0;
+  white-space: pre-wrap;
+  margin: 0;
+  padding: .5rem;
+  background: white;
+  font-size: .8rem;
+  font-family: monaco,Consolas,Lucida Console,monospace;
 }
 
 .bugs {
@@ -298,6 +321,40 @@ em {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+.bugDetails {
+  padding: .5rem;
+}
+
+.bugDetails ul {
+  margin-bottom: .5rem;
+}
+
+.bugDetails li {
+  padding: .2rem 0;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #DDD;
+}
+.bugDetails li:last-child {
+  border: 0;
+}
+
+.bugDetails li label, .bugDetails li span {
+  width: 50%;
+  flex-grow: 1;
+}
+
+.bugDetails li span {
+  text-align: right;
+}
+
+.dependson a {
+  float: left;
+  padding: .2rem;
+}
+
+
 
 @keyframes rotate {
   from { transform: rotate(1deg); }
