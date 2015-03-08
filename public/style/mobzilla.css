@@ -14,8 +14,8 @@ body {
   margin: 0;
 }
 
-body, input {
-  font-size: .8rem;
+body, input, textarea {
+  font-size: 1rem;
 }
 
 a {
@@ -31,6 +31,10 @@ input, textarea, .btn {
   padding: 10px;
   background: #FFF;
   text-decoration: none;
+}
+
+textarea {
+  height: 5rem;
 }
 
 ul {
@@ -175,6 +179,16 @@ header {
   padding: 0 .5rem;
 }
 
+#createBug h2 {
+  text-align: center;
+  font-weight: 100;
+  font-style: italic;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  flex-grow: 1;
+  color: #888;
+}
+
 .home h2 a {
   display: block;
   margin: 1rem;
@@ -266,44 +280,54 @@ em {
   font-weight: bold;
 }
 
-[hidden] {
-  display: none;
+[hidden], .hidden {
+  display: none !important;
+}
+
+.attachments:empty {
+  border: none;
+  padding: 0;
+}
+
+.attachments {
+  margin: 1rem 0;
+  padding: .5rem 0;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
 }
 
 .attachments li {
   padding: 5px;
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid #DDD;
 }
 
 .attachments li:last-child {
   border-bottom: 0;
 }
 
-.attachments img {
-  width: 2rem;
-  height: 2rem;
-  margin-right: .5rem;
-}
-
 .attachments li span {
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 2rem;
-  font-size: .8rem;
   flex-grow: 1;
+  white-space: nowrap;
+  color: #AAA;
+  font-style: italic;
 }
 
 .deleteAttachment {
   display: block;
   background: url(/style/icons/noun_5493.svg) no-repeat;
-  background-size: 100%;
-  width: 1.3rem;
-  height: 1.3rem;
-  margin-top: .45rem;
+  background-size: 120%;
+  width: 1rem;
+  height: 1rem;
   opacity: .5;
   flex-shrink: 0;
+}
+
+.attachments li span.previewLink {
+  color: #00AACC;
+  cursor: pointer;
 }
 
 .deleteAttachment:hover {
@@ -354,7 +378,43 @@ em {
   padding: .2rem;
 }
 
+.headerBtn {
+  width: 1.5rem;
+  display: block;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
 
+.close {
+  background-image: url(icons/close.png);
+}
+
+.attach {
+  background-image: url(icons/attach.png);
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
 
 @keyframes rotate {
   from { transform: rotate(1deg); }
