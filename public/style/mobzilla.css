@@ -374,7 +374,7 @@ em {
 }
 
 .dependson a {
-  float: left;
+  float: right;
   padding: .2rem;
 }
 

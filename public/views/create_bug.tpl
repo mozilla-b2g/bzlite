@@ -10,7 +10,7 @@
 
   <div class="createBugError warning" hidden>Error Filing Bug</div>
   <input type="text" placeholder="Title" id="summary" />
-  <input list="components" id="component" value="Gaia::Feedback" disabled hidden />
+  <input list="components" id="component" value="Gaia" disabled hidden />
   <textarea placeholder="Description" id="description" ></textarea>
   <span class="btn-file headerBtn attach" data-version="2">
     <input type="file" multiple />
