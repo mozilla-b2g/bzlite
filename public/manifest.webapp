@@ -1,11 +1,11 @@
 {
   "version": "0.1",
-  "name": "LadyBug",
+  "name": "Bugilla Lite",
   "description": "File the bugs",
   "launch_path": "/",
   "developer": {
     "name": "Dale Harvey",
-    "url": "http://yourawesomeapp.com"
+    "url": "http://bzlite.com"
   },
   "icons": {
     "512": "/style/icons/app-512.png",
