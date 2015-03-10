@@ -189,7 +189,7 @@ header h2 {
   color: #888;
 }
 
-.home h2 a {
+.home h2 {
   display: block;
   margin: 1rem;
   background: #E0E0E0;
@@ -255,11 +255,17 @@ header h2 {
 .home .file {
   background-image: url(/style/icons/noun_9529.svg);
   background-size: 1em;
-   background-position: .5rem center;
+  background-position: .5rem center;
 }
 
-.home .install a {
+.home .install {
   background-image: url(/style/icons/noun_4240.svg);
+  background-size: 1.2em;
+  background-position: .5rem center;
+}
+
+.home .dashboardlink {
+  background-image: url(/style/icons/noun_11757.svg);
   background-size: 1.2em;
   background-position: .5rem center;
 }
