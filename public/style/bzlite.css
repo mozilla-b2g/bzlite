@@ -189,7 +189,7 @@ header h2 {
   color: #888;
 }
 
-.home h2 {
+.home h2 a {
   display: block;
   margin: 1rem;
   background: #E0E0E0;
@@ -248,23 +248,23 @@ header h2 {
   width: calc(100% - 2rem);
 }
 
-.home .search {
+.home .search a {
   background-image: url(/style/icons/noun_15028.svg);
 }
 
-.home .file {
+.home .file a {
   background-image: url(/style/icons/noun_9529.svg);
   background-size: 1em;
   background-position: .5rem center;
 }
 
-.home .install {
+.home .install a {
   background-image: url(/style/icons/noun_4240.svg);
   background-size: 1.2em;
   background-position: .5rem center;
 }
 
-.home .dashboardlink {
+.home .dashboardlink a {
   background-image: url(/style/icons/noun_11757.svg);
   background-size: 1.2em;
   background-position: .5rem center;
