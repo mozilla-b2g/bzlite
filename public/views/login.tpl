@@ -1,5 +1,9 @@
 <form id="login">
 
+  <div class="waiting" hidden>
+    <div class="loading"></div>
+  </div>
+
   <header data-version="1">
     <a class="headerBtn close hidden"></a>
     <h2>Login</h2>

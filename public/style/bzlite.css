@@ -31,6 +31,7 @@ input, textarea, .btn {
   padding: 10px;
   background: #FFF;
   text-decoration: none;
+  outline: 0;
 }
 
 textarea {
@@ -424,6 +425,24 @@ em {
   cursor: inherit;
   display: block;
   margin: 0;
+  z-index: 1;
+}
+
+input[disabled] {
+  opacity: .5;
+}
+
+.waiting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, .8);
+  z-index: 100;
 }
 
 @keyframes rotate {
