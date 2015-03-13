@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*_test.js",
-    "watch": "watchify index.js -o public/js/bundle.js -v",
-    "build": "mkdir -p public/js && browserify index.js > public/js/bundle.js",
+    "watch": "watchify index.js -t envify -o public/js/bundle.js -v",
+    "build": "mkdir -p public/js && browserify index.js  -t envify > public/js/bundle.js",
     "start": "npm run watch & nodemon lib/server.js"
   },
   "author": "",
@@ -27,6 +27,7 @@
     "timeago": "^0.2.0",
     "selenium-standalone": "^4.1.0",
     "mocha": "^2.1.0",
-    "wd": "^0.3.11"
+    "wd": "^0.3.11",
+    "envify": "^3.3.1"
   }
 }
