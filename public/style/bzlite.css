@@ -9,7 +9,6 @@ body[data-version="2"] [data-version="1"] {
 }
 
 body {
-  background: #EFEFEF;
   overflow-x: hidden;
   margin: 0;
 }
@@ -21,6 +20,7 @@ body, input, textarea {
 a {
   text-decoration: none;
   color: #666;
+  cursor: pointer;
 }
 
 input, textarea, .btn {
@@ -97,12 +97,61 @@ header {
   padding: .5rem;
 }
 
+/* Main Layout*/
+header.main {
+  background: orange;
+  color: white;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  z-index: 100;
+}
+
+.main a {
+  color: white;
+}
+
+.burger {
+  width: 50px;
+  background: url(/style/icons/noun_56937_cc.svg) no-repeat left center;
+  background-size: 1rem;
+}
+
+.mainNavigation {
+  transition: all .3s;
+  /* TODO: we want this to be 100% and we want the navigation to slide
+     under the header */
+  transform: translateY(-150%);
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 3rem;
+  z-index: 50;
+  background: rgba(0, 0, 0, .5);
+}
+
+.mainNavigation.shown {
+  transform: translateY(0);
+}
+
+.mainNavigation ul {
+  background: #DDD;
+}
+
+.mainNavigation ul a {
+  display: block;
+  line-height: 2rem;
+  padding-left: .5rem;
+  border-bottom: 1px solid #CCC;
+}
+
 .title, .details {
-  padding: 0 .5rem;
+ padding: 0 .5rem;
 }
 
 .details, .bugNavigation, .comments div {
-  display: flex;
+ display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -184,7 +233,6 @@ header h2 {
   text-align: center;
   font-weight: 100;
   font-style: italic;
-  line-height: 2.5rem;
   font-size: 1.2rem;
   flex-grow: 1;
   color: #888;
