@@ -8,6 +8,10 @@ body[data-version="2"] [data-version="1"] {
   display: none;
 }
 
+body[data-version="1"] {
+  background: #EFEFEF;
+}
+
 body {
   overflow-x: hidden;
   margin: 0;
@@ -95,13 +99,13 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding: .5rem;
+  line-height: 2rem;
 }
 
 /* Main Layout*/
 header.main {
   background: orange;
   color: white;
-  line-height: 2rem;
   margin-bottom: 1rem;
   z-index: 100;
 }
@@ -434,13 +438,13 @@ em {
 }
 
 .headerBtn {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   display: block;
   border: 0;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100%;
+  background-size: 1.5rem;
 }
 
 .close {
@@ -454,7 +458,6 @@ em {
 .btn-file {
   position: relative;
   overflow: hidden;
-  margin-top: .5rem;
 }
 
 .btn-file input[type=file] {
