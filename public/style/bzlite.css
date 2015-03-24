@@ -483,16 +483,16 @@ input[disabled] {
   opacity: .5;
 }
 
-.waiting {
+.dialog {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, .8);
+  background: rgba(0, 0, 0, .5);
   z-index: 100;
 }
 
@@ -521,7 +521,34 @@ input[disabled] {
   opacity: 0;
 }
 
+.dialog div {
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.dialog span {
+  display: block;
+  color: #999;
+  padding: 1.5rem;
+  font-size: .9rem;
+  background: #EFEFEF;
+}
+
+.progress {
+  min-width: 200%;
+  height: 2px;
+  background: repeating-linear-gradient(135deg, #00AACC, #00AACC 50px,
+                                        #EFEFEF 50px, #EFEFEF 100px);
+  animation: moving-backward 1500ms infinite linear;
+}
+
 @keyframes rotate {
   from { transform: rotate(1deg); }
   to   { transform: rotate(360deg); }
+}
+
+@keyframes moving-backward {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-142px); }
 }
