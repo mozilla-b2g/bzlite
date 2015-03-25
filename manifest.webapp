@@ -12,6 +12,8 @@
     "128": "/style/icons/app-128.png"
   },
   "activities": {
-    "share": {}
+    "share": {
+      "href": "/"
+    }
   }
 }
