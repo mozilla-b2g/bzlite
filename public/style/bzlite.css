@@ -365,13 +365,22 @@ em {
   border-bottom: 0;
 }
 
-.attachments li span {
+.attachments li .name {
   overflow: hidden;
   text-overflow: ellipsis;
   flex-grow: 1;
   white-space: nowrap;
   color: #AAA;
   font-style: italic;
+}
+
+.attachments li .size {
+  display: block;
+  width: 5.5rem;
+  overflow: hidden;
+  color: #AAA;
+  text-align: right;
+  margin-right: .5rem;
 }
 
 .deleteAttachment {
