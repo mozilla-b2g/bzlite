@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <a id="test">Install BZ Lite</a>
+    <script>
+      var el = document.getElementById('test');
+      el.addEventListener('click', function() {
+        navigator.mozApps.install(location.href + 'manifest.webapp');
+      });
+    </script>
+  </body>
+</html>
