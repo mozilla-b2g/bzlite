@@ -235,7 +235,7 @@ header.main {
 
 header h2 {
   text-align: center;
-  font-weight: 100;
+  font-weight: normal;
   font-style: italic;
   font-size: 1.2rem;
   flex-grow: 1;
