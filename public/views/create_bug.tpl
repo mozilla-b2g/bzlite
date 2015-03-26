@@ -8,7 +8,6 @@
     </span>
   </header>
 
-  <div class="createBugError warning" hidden>Error Filing Bug</div>
   <input type="text" placeholder="Title" id="summary" />
   <input list="components" id="component" value="Gaia::Feedback" disabled hidden />
   <textarea placeholder="Description" id="description" ></textarea>

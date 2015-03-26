@@ -492,7 +492,7 @@ input[disabled] {
   opacity: .5;
 }
 
-.dialog {
+.dialog, .alert {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -538,10 +538,21 @@ input[disabled] {
 
 .dialog span {
   display: block;
-  color: #999;
+  color: #666;
   padding: 1.5rem;
   font-size: .9rem;
-  background: #EFEFEF;
+  background: #F0F0F0;
+}
+
+.dialog button {
+  display: block;
+  width: 100%;
+  color: #00AACC;
+  border: 0;
+  line-height: 3rem;
+  border-top: 1px solid #CCC;
+  background: white;
+  font-size: 1rem;
 }
 
 .progress {
