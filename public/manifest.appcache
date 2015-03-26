@@ -1,0 +1,36 @@
+CACHE MANIFEST
+# Thu Mar 26 2015 23:03:24 GMT+0000 (GMT)
+
+/activity.html
+/index.html
+/
+/install.html
+/js/.empty
+/js/bundle.js
+/views/attachment-row.tpl
+/views/bug-comment.tpl
+/views/bug-details.tpl
+/views/bug.tpl
+/views/create_bug.tpl
+/views/dashboard-row.tpl
+/views/dashboard.tpl
+/views/home.tpl
+/views/login.tpl
+/views/search.tpl
+/views/view-attachment-row.tpl
+/style/bzlite.css
+/style/icons/app-128.png
+/style/icons/app-512.png
+/style/icons/attach.png
+/style/icons/close.png
+/style/icons/loading.png
+/style/icons/noun_11757.svg
+/style/icons/noun_14173_cc.svg
+/style/icons/noun_15028.svg
+/style/icons/noun_4240.svg
+/style/icons/noun_5493.svg
+/style/icons/noun_56937_cc.svg
+/style/icons/noun_9529.svg
+
+NETWORK:
+*

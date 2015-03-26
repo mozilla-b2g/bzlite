@@ -6,13 +6,15 @@
   "scripts": {
     "test": "mocha test/*_test.js",
     "watch": "watchify index.js -t envify -o public/js/bundle.js -v",
-    "build": "mkdir -p public/js && browserify index.js  -t envify > public/js/bundle.js",
+    "build": "browserify index.js  -t envify > public/js/bundle.js",
+    "build-manifest": "appcachegen public -o public/manifest.appcache",
     "start": "npm run watch & nodemon lib/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.11.2"
+    "express": "^4.11.2",
+    "appcachegen": "0.0.3"
   },
   "browser": {
     "request": "./lib/request-browser.js"
