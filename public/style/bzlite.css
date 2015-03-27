@@ -38,6 +38,11 @@ input, textarea, .btn {
   outline: 0;
 }
 
+button, .btn, input[type=submit] {
+  box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, .25);
+}
+
+
 textarea {
   height: 5rem;
 }
@@ -55,6 +60,11 @@ h2 {
 
 .btn {
   text-align: center;
+}
+
+.headerBtn {
+  font-size: 0.8rem;
+  color: #00AACC;
 }
 
 label {
@@ -154,10 +164,10 @@ header.main {
  padding: 0 .5rem;
 }
 
-.details, .bugNavigation, .comments div {
+.details, .bugNavigation, .comments div, .row {
  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+ flex-direction: row;
+ justify-content: space-between;
 }
 
 .bugNavigation {
@@ -446,14 +456,16 @@ em {
   padding: .2rem;
 }
 
-.headerBtn {
-  width: 2rem;
+.attachBtn {
   height: 2rem;
   display: block;
   border: 0;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: left center;
   background-size: 1.5rem;
+  line-height: 2rem;
+  color: #00AACC;
+  text-indent: 2rem;
 }
 
 .close {
