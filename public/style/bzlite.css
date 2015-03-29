@@ -368,6 +368,7 @@ em {
 .attachments li {
   padding: 5px;
   display: flex;
+  line-height: 1.6rem;
   flex-direction: row;
 }
 
@@ -395,12 +396,12 @@ em {
 
 .deleteAttachment {
   display: block;
-  background: url(/style/icons/noun_5493.svg) no-repeat;
-  background-size: 120%;
-  width: 1rem;
-  height: 1rem;
-  opacity: .5;
+  background: url(/style/icons/remove.png) no-repeat;
+  background-size: 1rem;
+  background-position: center center;
   flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .attachments li span.previewLink {
