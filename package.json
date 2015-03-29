@@ -8,7 +8,8 @@
     "watch": "watchify index.js -t envify -o public/js/bundle.js -v",
     "build": "browserify index.js  -t envify > public/js/bundle.js",
     "build-manifest": "appcachegen public -o public/manifest.appcache",
-    "start": "npm run watch & nodemon lib/server.js"
+    "watch-manifest": "nodemon --verbose --watch ./public -e css,js,tpl,html,png,svg --exec npm run build-manifest",
+    "start": "npm run watch & npm run watch-manifest & nodemon lib/server.js"
   },
   "author": "",
   "license": "ISC",
