@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.0.2",
   "name": "Bugilla Lite",
   "description": "File the bugs",
   "launch_path": "/",
@@ -13,6 +13,9 @@
   },
   "activities": {
     "share": {
+      "filters": {
+        "type": ["application/vnd.moz-systemlog"]
+      },
       "href": "/"
     }
   }
