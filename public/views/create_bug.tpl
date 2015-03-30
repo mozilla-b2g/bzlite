@@ -3,7 +3,7 @@
   <header data-version="1">
     <a class="headerBtn close hidden"></a>
     <h2>File a Bug</h2>
-    <a href="/logout/" class="headerBtn">logout</a>
+    <a href="/logout/" class="headerBtn logout" hidden>logout</a>
   </header>
 
   <input type="text" placeholder="Title" id="summary" />
