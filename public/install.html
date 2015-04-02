@@ -2,13 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <a id="test">Install BZ Lite</a>
     <script>
       var el = document.getElementById('test');
       el.addEventListener('click', function() {
-        navigator.mozApps.install('http://v1.bzlite.com/manifest.webapp');
+
+        navigator.mozApps.install('http://' + document.location.host + '/manifest.webapp');
       });
     </script>
   </body>
