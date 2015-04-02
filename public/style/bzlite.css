@@ -12,13 +12,16 @@ body[data-version="1"] {
   background: #EFEFEF;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   overflow-x: hidden;
   margin: 0;
-}
-
-body, input, textarea {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  color: #474747;
 }
 
 a {
@@ -27,7 +30,7 @@ a {
   cursor: pointer;
 }
 
-input, textarea, .btn {
+input, textarea, .btn, button {
   width: 100%;
   display: block;
   border: 0;
@@ -36,15 +39,17 @@ input, textarea, .btn {
   background: #FFF;
   text-decoration: none;
   outline: 0;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  color: #474747;
 }
 
 button, .btn, input[type=submit] {
   box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, .25);
 }
 
-
 textarea {
-  height: 5rem;
+  height: 11rem;
 }
 
 ul {
@@ -63,20 +68,41 @@ h2 {
 }
 
 .headerBtn {
-  font-size: 0.8rem;
-  color: #00AACC;
+  font-size: 1.2rem;
+  width: 4rem;
+}
+
+.logout {
+  text-align: right;
+}
+
+.close {
+  visibility: hidden;
+}
+
+/* Fun hack to get rid of the text moving when the border-bottom is
+   applied on focus */
+input[type=text], input[type=password], input[type=email] {
+  height: 4rem;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  padding-top: 1.2rem;
 }
 
 label {
  display: block;
 }
 
-input, textarea, select, .btn {
-  margin-bottom: 15px;
+form {
+  margin: 2rem 1.5rem 0 1.5rem;
+}
+
+input, textarea, select, .btn, .btn-file {
+  margin-bottom: 2rem;
 }
 
 input:focus, textarea:focus {
-  border-bottom: 1px solid #00AACC;
+ border-bottom: .3rem solid #00AACC;
 }
 
 input[type=submit], .btn {
@@ -108,8 +134,15 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: .5rem;
-  line-height: 2rem;
+  padding: 0 1.5rem;
+  line-height: 5rem;
+  background: #9ab0c0;
+  color: white;
+}
+
+header a {
+  color: white;
+  font-style: italic;
 }
 
 /* Main Layout*/
@@ -239,17 +272,12 @@ header.main {
   margin: 0 auto;
 }
 
-#createBug, #login {
-  padding: 0 .5rem;
-}
-
 header h2 {
   text-align: center;
-  font-weight: normal;
+  font-weight: 300;
+  font-size: 24px;
   font-style: italic;
-  font-size: 1.2rem;
   flex-grow: 1;
-  color: #888;
 }
 
 .home h2 a {
@@ -350,7 +378,12 @@ em {
 }
 
 [hidden], .hidden {
-  display: none !important;
+  display: none;
+}
+
+.headerBtn[hidden] {
+  display: block;
+  visibility: hidden;
 }
 
 .attachments:empty {
@@ -366,9 +399,8 @@ em {
 }
 
 .attachments li {
-  padding: 5px;
   display: flex;
-  line-height: 1.6rem;
+  line-height: 3.2rem;
   flex-direction: row;
 }
 
@@ -387,21 +419,20 @@ em {
 
 .attachments li .size {
   display: block;
-  width: 5.5rem;
+  width: 7rem;
   overflow: hidden;
   color: #AAA;
   text-align: right;
-  margin-right: .5rem;
 }
 
 .deleteAttachment {
   display: block;
   background: url(/style/icons/remove.png) no-repeat;
-  background-size: 1rem;
-  background-position: center center;
+  background-size: 1.6rem;
+  background-position: center right;
   flex-shrink: 0;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 3rem;
+  height: 3.2rem;
 }
 
 .attachments li span.previewLink {
@@ -553,7 +584,6 @@ input[disabled] {
   display: block;
   color: #666;
   padding: 1.5rem;
-  font-size: .9rem;
   background: #F0F0F0;
 }
 
@@ -565,7 +595,6 @@ input[disabled] {
   line-height: 3rem;
   border-top: 1px solid #CCC;
   background: white;
-  font-size: 1rem;
 }
 
 .progress {
