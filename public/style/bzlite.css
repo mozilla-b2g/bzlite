@@ -35,16 +35,21 @@ input, textarea, .btn, button {
   display: block;
   border: 0;
   border: 1px solid #CCC;
-  padding: 10px;
   background: #FFF;
   text-decoration: none;
   outline: 0;
   font-size: 1.5rem;
   line-height: 2.0rem;
   color: #474747;
+  padding: 0 1rem;
+}
+
+textarea {
+  padding-top: 1rem;
 }
 
 button, .btn, input[type=submit] {
+  padding: 1rem;
   box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, .25);
 }
 
@@ -85,8 +90,9 @@ h2 {
 input[type=text], input[type=password], input[type=email] {
   height: 4rem;
 }
+
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
-  padding-top: 1.2rem;
+  padding-top: .2rem;
 }
 
 label {
@@ -494,10 +500,10 @@ em {
   border: 0;
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 1.5rem;
+  background-size: 2rem;
   line-height: 2rem;
   color: #00AACC;
-  text-indent: 2rem;
+  text-indent: 2.5rem;
 }
 
 .close {

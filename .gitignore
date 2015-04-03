@@ -1,4 +1,5 @@
 public/js/bundle.js
+public/manifest.appcache
 
 *.DS_Store
 node_modules
