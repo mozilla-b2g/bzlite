@@ -425,10 +425,11 @@ em {
 
 .attachments li .size {
   display: block;
-  width: 7rem;
+  width: 7.5rem;
   overflow: hidden;
   color: #AAA;
   text-align: right;
+  white-space: nowrap;
 }
 
 .deleteAttachment {
@@ -580,17 +581,20 @@ input[disabled] {
   opacity: 0;
 }
 
-.dialog div {
+.dialog > div {
   width: calc(100% - 2rem);
   margin: 0 auto;
   overflow: hidden;
+  padding-bottom: 4rem;
+  font-style: italic;
+  background: #F9F9F9;
 }
 
 .dialog span {
   display: block;
   color: #666;
-  padding: 1.5rem;
-  background: #F0F0F0;
+  padding: 3rem 2rem;
+  background: #EFEFEF;
 }
 
 .dialog button {
