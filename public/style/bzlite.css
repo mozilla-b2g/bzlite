@@ -425,10 +425,11 @@ em {
 
 .attachments li .size {
   display: block;
-  width: 7rem;
+  width: 7.5rem;
   overflow: hidden;
   color: #AAA;
   text-align: right;
+  white-space: nowrap;
 }
 
 .deleteAttachment {
