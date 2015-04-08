@@ -77,7 +77,7 @@ h2 {
   width: 4rem;
 }
 
-.logout {
+.logout, .login {
   text-align: right;
 }
 
@@ -387,11 +387,6 @@ em {
   display: none;
 }
 
-.headerBtn[hidden] {
-  display: block;
-  visibility: hidden;
-}
-
 .attachments:empty {
   border: none;
   padding: 0;
@@ -616,6 +611,13 @@ input[disabled] {
   background: repeating-linear-gradient(135deg, #00AACC, #00AACC 50px,
                                         #EFEFEF 50px, #EFEFEF 100px);
   animation: moving-backward 1500ms infinite linear;
+}
+
+#login .row input:first-child {
+  margin-right: 1rem;
+}
+#login .row input:last-child {
+  margin-left: 1rem;
 }
 
 @keyframes rotate {

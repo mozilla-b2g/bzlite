@@ -7,6 +7,9 @@
   <form id="login">
     <input type="email" placeholder="Email Address" />
     <input type="password" placeholder="Password" />
-    <input type="submit" value="Login" />
+    <div class="row">
+      <input type="button" class="btn warning" id="cancel" value="Cancel" />
+      <input type="submit" value="Login" />
+    </div>
   </form>
 </div>
