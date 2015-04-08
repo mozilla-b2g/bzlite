@@ -585,9 +585,12 @@ input[disabled] {
   width: calc(100% - 2rem);
   margin: 0 auto;
   overflow: hidden;
-  padding-bottom: 4rem;
   font-style: italic;
   background: #F9F9F9;
+}
+
+.notice > div {
+  padding-bottom: 4rem;
 }
 
 .dialog span {

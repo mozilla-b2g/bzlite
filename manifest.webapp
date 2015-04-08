@@ -1,10 +1,10 @@
 {
-  "version": "0.0.2",
+  "version": "0.0.3",
   "name": "Bugilla Lite",
-  "description": "File the bugs",
+  "description": "Mobile app for Bugzilla",
   "launch_path": "/",
   "developer": {
-    "name": "Dale Harvey",
+    "name": "The Gaia Team",
     "url": "http://bzlite.com"
   },
   "icons": {
