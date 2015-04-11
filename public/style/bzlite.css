@@ -9,7 +9,7 @@ body[data-version="2"] [data-version="1"] {
 }
 
 body[data-version="1"] {
-  background: #EFEFEF;
+  background: #F4F4F4;
 }
 
 html {
@@ -19,7 +19,7 @@ html {
 body {
   overflow-x: hidden;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 2.0rem;
   color: #474747;
 }
@@ -38,9 +38,8 @@ input, textarea, .btn, button {
   background: #FFF;
   text-decoration: none;
   outline: 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 2.0rem;
-  color: #474747;
   padding: 0 1rem;
 }
 
@@ -50,7 +49,6 @@ textarea {
 
 button, .btn, input[type=submit] {
   padding: 1rem;
-  box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, .25);
 }
 
 textarea {
@@ -73,8 +71,8 @@ h2 {
 }
 
 .headerBtn {
-  font-size: 1.2rem;
-  width: 4rem;
+  font-size: 1.4rem;
+  width: 5rem;
 }
 
 .logout, .login {
@@ -103,22 +101,28 @@ form {
   margin: 2rem 1.5rem 0 1.5rem;
 }
 
-input, textarea, select, .btn, .btn-file {
+input, textarea, select, .btn {
   margin-bottom: 2rem;
 }
 
 input:focus, textarea:focus {
- border-bottom: .3rem solid #00AACC;
+ border-bottom: .3rem solid #00caf2;
 }
 
 input[type=submit], .btn {
   display: block;
   font-style: italic;
-  background: #00AACC;
+  background: #00caf2;
   color: white;
   border-radius: 2em;
   border: 0;
 }
+
+input[type=submit]:active, .btn:active {
+  background: white;
+  color: #00caf2;
+}
+
 
 input[type=search] {
   border-radius: 2em;
@@ -133,7 +137,7 @@ input[type=search] {
 
 ::-moz-placeholder {
   font-style: italic;
-  color: #CCC;
+  color: #909ca7;
 }
 
 header {
@@ -393,7 +397,7 @@ em {
 }
 
 .attachments {
-  margin: 1rem 0;
+  margin: 0 0 2rem 0;
   padding: .5rem 0;
   border-top: 1px solid #DDD;
   border-bottom: 1px solid #DDD;
@@ -401,7 +405,7 @@ em {
 
 .attachments li {
   display: flex;
-  line-height: 3.2rem;
+  line-height: 4rem;
   flex-direction: row;
 }
 
@@ -434,7 +438,7 @@ em {
   background-position: center right;
   flex-shrink: 0;
   width: 3rem;
-  height: 3.2rem;
+  height: 4rem;
 }
 
 .attachments li span.previewLink {
@@ -491,15 +495,15 @@ em {
 }
 
 .attachBtn {
-  height: 2rem;
   display: block;
   border: 0;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: right center;
   background-size: 2rem;
-  line-height: 2rem;
+  height: 5.2rem;
+  line-height: 5.2rem;
   color: #00AACC;
-  text-indent: 2.5rem;
+  border-top: 1px solid #DDD;
 }
 
 .close {
@@ -547,7 +551,7 @@ input[disabled] {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(202, 202, 202, .9);
   z-index: 100;
 }
 
@@ -585,7 +589,7 @@ input[disabled] {
 }
 
 .notice > div {
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 }
 
 .dialog span {
@@ -598,11 +602,16 @@ input[disabled] {
 .dialog button {
   display: block;
   width: 100%;
-  color: #00AACC;
+  color: #00caf2;
   border: 0;
   line-height: 3rem;
   border-top: 1px solid #CCC;
   background: white;
+}
+
+.dialog button:active {
+  background: #00caf2;
+  color: white;
 }
 
 .progress {
