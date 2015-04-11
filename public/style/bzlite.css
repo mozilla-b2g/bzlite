@@ -399,7 +399,6 @@ em {
 .attachments {
   margin: 0 0 2rem 0;
   padding: .5rem 0;
-  border-top: 1px solid #DDD;
   border-bottom: 1px solid #DDD;
 }
 
@@ -434,10 +433,10 @@ em {
 .deleteAttachment {
   display: block;
   background: url(/style/icons/remove.png) no-repeat;
-  background-size: 1.6rem;
+  background-size: 2.4rem;
   background-position: center right;
   flex-shrink: 0;
-  width: 3rem;
+  width: 2.8rem;
   height: 4rem;
 }
 
@@ -504,6 +503,7 @@ em {
   line-height: 5.2rem;
   color: #00AACC;
   border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
 }
 
 .close {
