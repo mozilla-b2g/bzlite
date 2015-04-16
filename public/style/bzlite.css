@@ -41,6 +41,7 @@ input, textarea, .btn, button {
   font-size: 1.7rem;
   line-height: 2.0rem;
   padding: 0 1rem;
+  border-radius: 0;
 }
 
 textarea {
@@ -138,6 +139,7 @@ input[type=search] {
 ::-moz-placeholder {
   font-style: italic;
   color: #909ca7;
+  opacity: 1;
 }
 
 header {
@@ -397,7 +399,7 @@ em {
 }
 
 .attachments {
-  margin: 0 0 2rem 0;
+  margin: 0 0 2.5rem 0;
   padding: .5rem 0;
   border-bottom: 1px solid #DDD;
 }
@@ -517,6 +519,7 @@ em {
 .btn-file {
   position: relative;
   overflow: hidden;
+  font-style: italic;
 }
 
 .btn-file input[type=file] {
@@ -620,6 +623,10 @@ input[disabled] {
   background: repeating-linear-gradient(135deg, #00AACC, #00AACC 50px,
                                         #EFEFEF 50px, #EFEFEF 100px);
   animation: moving-backward 1500ms infinite linear;
+}
+
+#description {
+  margin-bottom: 2.5rem;
 }
 
 #login .row input:first-child {
