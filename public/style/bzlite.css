@@ -76,12 +76,16 @@ h2 {
   width: 5rem;
 }
 
+.loginScreen .headerBtn {
+  width: 2rem;
+}
+
 .logout, .login {
   text-align: right;
 }
 
-.close {
-  visibility: hidden;
+.logout:active, .login:active {
+  opacity: .5;
 }
 
 /* Fun hack to get rid of the text moving when the border-bottom is
@@ -510,6 +514,9 @@ em {
 
 .close {
   background-image: url(icons/close.png);
+  background-repeat: no-repeat;
+  background-size: 1.5em;
+  background-position: left center;
 }
 
 .attach {
@@ -527,8 +534,6 @@ em {
   top: 0;
   right: 0;
   min-width: 100%;
-  min-height: 100%;
-  height: 100%;
   font-size: 100px;
   text-align: right;
   filter: alpha(opacity=0);
@@ -537,8 +542,13 @@ em {
   background: white;
   cursor: inherit;
   display: block;
-  margin: 0;
+  margin: 1rem 0;
+  height: 3.2rem;
   z-index: 1;
+}
+
+.btn-file:active span {
+  opacity: .5;
 }
 
 input[disabled] {
@@ -584,7 +594,7 @@ input[disabled] {
 }
 
 .dialog > div {
-  width: calc(100% - 2rem);
+  width: calc(100% - 3rem);
   margin: 0 auto;
   overflow: hidden;
   font-style: italic;
@@ -598,7 +608,7 @@ input[disabled] {
 .dialog span {
   display: block;
   color: #666;
-  padding: 3rem 2rem;
+  padding: 3.65rem 2rem;
   background: #EFEFEF;
 }
 
@@ -618,10 +628,15 @@ input[disabled] {
 }
 
 .progress {
-  min-width: 200%;
-  height: 2px;
-  background: repeating-linear-gradient(135deg, #00AACC, #00AACC 50px,
-                                        #EFEFEF 50px, #EFEFEF 100px);
+  min-width: 300%;
+  height: .4rem;
+  background: repeating-linear-gradient(135deg,
+                                        #00caf2 0px,
+                                        #00caf2 11%,
+                                        #b2f2ff 11%,
+                                        #b2f2ff 22%,
+                                        #a6a6a6 22%,
+                                        #a6a6a6 33%);
   animation: moving-backward 1500ms infinite linear;
 }
 
@@ -643,5 +658,5 @@ input[disabled] {
 
 @keyframes moving-backward {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-142px); }
+  100% { transform: translateX(-33%); }
 }
