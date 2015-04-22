@@ -12,6 +12,10 @@ body[data-version="1"] {
   background: #F4F4F4;
 }
 
+html, body {
+  height: 100%;
+}
+
 html {
   font-size: 10px;
 }
@@ -130,14 +134,13 @@ input[type=submit]:active, .btn:active {
 
 
 input[type=search] {
+  padding: .5rem;
   border-radius: 2em;
-  text-indent: 1.2em;
+  text-indent: 1.7em;
   background-image: url(/style/icons/noun_15028.svg);
   background-repeat: no-repeat;
   background-position: 0 center;
   background-size: 2em;
-  width: calc(100% - 2rem);
-  margin: 0 1rem 1rem 1rem;
 }
 
 ::-moz-placeholder {
@@ -162,55 +165,34 @@ header a {
 }
 
 /* Main Layout*/
-header.main {
-  background: orange;
-  color: white;
-  margin-bottom: 1rem;
-  z-index: 100;
-}
-
-.main a {
-  color: white;
-}
-
-.burger {
-  width: 50px;
-  background: url(/style/icons/noun_56937_cc.svg) no-repeat left center;
-  background-size: 1rem;
-}
-
 .mainNavigation {
-  transition: all .3s;
-  /* TODO: we want this to be 100% and we want the navigation to slide
-     under the header */
-  transform: translateY(-150%);
+  background: #000;
   display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 3rem;
   z-index: 50;
-  background: rgba(0, 0, 0, .5);
 }
 
-.mainNavigation.shown {
-  transform: translateY(0);
-}
-
-.mainNavigation ul {
-  background: #DDD;
-}
 
 .mainNavigation ul a {
+  font-size: 1.4rem;
   display: block;
   line-height: 2rem;
-  padding-left: .5rem;
-  border-bottom: 1px solid #CCC;
+  padding: .5rem;
 }
 
 .title, .details {
  padding: 0 .5rem;
+}
+
+#wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#content {
+  flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .details, .bugNavigation, .comments div, .row {
@@ -234,10 +216,6 @@ header.main {
   background: #666;
 }
 
-.details span {
-  font-size: .8rem;
-}
-
 .bugs a {
   display: block;
   padding:  0.5rem;
@@ -245,7 +223,6 @@ header.main {
   color: #666;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 0.8rem;
   overflow: hidden;
   border-bottom: 1px solid #DDD;
 }
@@ -264,7 +241,6 @@ header.main {
 
 .comments div span {
   color: #999;
-  font-size: .8rem;
 }
 
 .comments p {
@@ -281,10 +257,10 @@ header.main {
 }
 
 .loading {
-  min-height: 4rem;
+  min-height: 8rem;
   background: url(/style/icons/loading.png) no-repeat center;
   animation: 0.9s rotate infinite steps(30);
-  width: 2rem;
+  width: 4rem;
   margin: 0 auto;
 }
 
@@ -314,7 +290,6 @@ header h2 {
 }
 
 .dashboard h2 {
-  font-size: .75rem;
   font-weight: normal;
   padding:  0.5rem;
   margin: 0;
@@ -336,7 +311,7 @@ header h2 {
 }
 
 .dashboard ul {
-  font-size: .8rem;
+  font-size: 1.2rem;
 }
 
 .dashboard ul a div  {

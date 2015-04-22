@@ -17,6 +17,4 @@
     <ul></ul>
   </div>
 
-  <a href="/logout/" class="btn warning">Logout</a>
-
 </div>
