@@ -1,29 +1,20 @@
 * {
   box-sizing: border-box;
   font-family: Fira Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-body[data-version="1"] [data-version="2"],
-body[data-version="2"] [data-version="1"] {
-  display: none;
-}
-
-body[data-version="1"] {
-  background: #F4F4F4;
-}
-
-html, body {
-  height: 100%;
+  margin: 0;
 }
 
 html {
   font-size: 10px;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-  overflow-x: hidden;
   margin: 0;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   line-height: 2.0rem;
   color: #474747;
 }
@@ -42,7 +33,7 @@ input, textarea, .btn, button {
   background: #FFF;
   text-decoration: none;
   outline: 0;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   line-height: 2.0rem;
   padding: 0 1rem;
   border-radius: 0;
@@ -66,9 +57,13 @@ ul {
   margin: 0;
 }
 
-h2 {
-  font-size: 1rem;
+h1, h2, h3, h4, h5 {
   margin: 0;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: normal;
 }
 
 .btn {
@@ -168,7 +163,7 @@ header a {
 .mainNavigation {
   background: #000;
   display: block;
-  z-index: 50;
+  flex-shrink: 0;
 }
 
 
@@ -192,7 +187,7 @@ header a {
 
 #content {
   flex-grow: 1;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .details, .bugNavigation, .comments div, .row {
@@ -248,7 +243,6 @@ header a {
   margin: 0;
   padding: .5rem;
   background: white;
-  font-size: .8rem;
   font-family: monaco,Consolas,Lucida Console,monospace;
 }
 
@@ -267,7 +261,6 @@ header a {
 header h2 {
   text-align: center;
   font-weight: 300;
-  font-size: 24px;
   font-style: italic;
   flex-grow: 1;
 }
@@ -289,21 +282,18 @@ header h2 {
   cursor: pointer;
 }
 
-.dashboard h2 {
-  font-weight: normal;
-  padding:  0.5rem;
-  margin: 0;
-  color: #999;
+.dashboard h5 {
+  text-align: center;
 }
 
 .dashboard a {
   display: block;
-  border-bottom: 1px solid #DDD;
-  padding: .5rem;
+  padding: 1rem;
 }
 
 .dashboard ul a {
   background: #FFF;
+  border-bottom: 1px solid #DDD;
 }
 
 .dashboard ul a:hover {
@@ -625,6 +615,12 @@ input[disabled] {
 #login .row input:last-child {
   margin-left: 1rem;
 }
+
+[data-path="/dashboard/filed/"] .filed,
+[data-path="/dashboard/flags/"] .flags,
+[data-path="/dashboard/flagged/"] .flagged,
+[data-path="/dashboard/"] .assigned,
+[data-path="/"] .assigned { background-color: #EEE; }
 
 @keyframes rotate {
   from { transform: rotate(1deg); }

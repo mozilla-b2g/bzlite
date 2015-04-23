@@ -1,20 +1,14 @@
 <div class="dashboard">
 
+  <div class="row">
+    <h5 class="assigned"><a href="/dashboard/">Assigned</a></h5>
+    <h5 class="flags"><a href="/dashboard/flags/">Flags</a></h5>
+    <h5 class="flagged"><a href="/dashboard/flagged/">Flagged</a></h5>
+    <h5 class="filed"><a href="/dashboard/filed/">Filed</a></h5>
+  </div>
+
+  <ul id="bugs"></ul>
+
   <div class="loading"></div>
-
-  <div class="assigned" hidden>
-    <h2>Assigned</h2>
-    <ul></ul>
-  </div>
-
-  <div class="yourFlags" hidden>
-    <h2>Flags Requested of You</h2>
-    <ul></ul>
-  </div>
-
-  <div class="theirFlags" hidden>
-    <h2>Flags You Have Requested</h2>
-    <ul></ul>
-  </div>
 
 </div>
