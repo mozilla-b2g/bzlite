@@ -1,5 +1,5 @@
 <a>
-  <div>
+  <div class="row bugheader">
     <span class="id"></span>
     <span class="lastChanged"></span>
   </div>

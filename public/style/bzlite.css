@@ -174,7 +174,11 @@ header a {
   padding: .5rem;
 }
 
-.title, .details {
+.title {
+ padding: .5rem;
+}
+
+.details {
  padding: 0 .5rem;
 }
 
@@ -190,25 +194,10 @@ header a {
   overflow-y: auto;
 }
 
-.details, .bugNavigation, .comments div, .row {
+.details, .comments div, .row {
  display: flex;
  flex-direction: row;
  justify-content: space-between;
-}
-
-.bugNavigation {
-  background: #999;
-  margin: .5rem 0 0rem 0;
-}
-
-.bugNavigation a {
-  padding: .5rem;
-  color: #EEE;
-  cursor: pointer;
-}
-
-.bugNavigation a:hover {
-  background: #666;
 }
 
 .bugs a {
@@ -286,14 +275,17 @@ header h2 {
   text-align: center;
 }
 
-.dashboard a {
-  display: block;
-  padding: 1rem;
-}
-
 .dashboard ul a {
   background: #FFF;
   border-bottom: 1px solid #DDD;
+}
+
+.bugnav, .dashboardnav {
+  border-bottom: 1px solid #DDD;
+}
+.dashboard a, .bugnav a {
+  display: block;
+  padding: .7rem;
 }
 
 .dashboard ul a:hover {
@@ -304,15 +296,8 @@ header h2 {
   font-size: 1.2rem;
 }
 
-.dashboard ul a div  {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: .5rem;
-}
-
-.dashboard ul {
-  border-top: 1px solid #DDD;
+.bugheader {
+  color: #BBB;
 }
 
 .dashboard .btn {
@@ -616,6 +601,13 @@ input[disabled] {
   margin-left: 1rem;
 }
 
+.emptyNotice {
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+}
+
+h5.active,
 [data-path="/dashboard/filed/"] .filed,
 [data-path="/dashboard/flags/"] .flags,
 [data-path="/dashboard/flagged/"] .flagged,

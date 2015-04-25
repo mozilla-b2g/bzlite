@@ -1,6 +1,6 @@
 <div class="dashboard">
 
-  <div class="row">
+  <div class="row dashboardnav">
     <h5 class="assigned"><a href="/dashboard/">Assigned</a></h5>
     <h5 class="flags"><a href="/dashboard/flags/">Flags</a></h5>
     <h5 class="flagged"><a href="/dashboard/flagged/">Flagged</a></h5>
