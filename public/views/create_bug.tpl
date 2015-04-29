@@ -3,8 +3,8 @@
   <header data-version="1">
     <a class="headerBtn"></a>
     <h2>File a Bug</h2>
-    <a href="/logout/" class="headerBtn logout" hidden>Logout</a>
-    <a href="/login/" class="headerBtn login" hidden>Login</a>
+    <button class="headerBtn logout" hidden>Logout</button>
+    <button class="headerBtn login" hidden>Login</button>
   </header>
 
   <form id="createBug">

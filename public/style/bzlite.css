@@ -72,8 +72,13 @@ h2 {
 }
 
 .headerBtn {
+  border: 0;
+  outline: none;
+  background: none;
   font-size: 1.4rem;
   width: 5rem;
+  color: white;
+  font-style: italic;
 }
 
 .loginScreen .headerBtn {
@@ -82,10 +87,6 @@ h2 {
 
 .logout, .login {
   text-align: right;
-}
-
-.logout:active, .login:active {
-  opacity: .5;
 }
 
 /* Fun hack to get rid of the text moving when the border-bottom is
@@ -154,11 +155,6 @@ header {
   line-height: 5rem;
   background: #9ab0c0;
   color: white;
-}
-
-header a {
-  color: white;
-  font-style: italic;
 }
 
 /* Main Layout*/
@@ -451,10 +447,6 @@ em {
   cursor: pointer;
 }
 
-.deleteAttachment:hover {
-  opacity: .75;
-}
-
 .preview {
   position: fixed;
   top: 0;
@@ -510,6 +502,7 @@ em {
   color: #00AACC;
   border-top: 1px solid #DDD;
   border-bottom: 1px solid #DDD;
+  text-indent: 0.1rem;
 }
 
 .close {
@@ -547,7 +540,11 @@ em {
   z-index: 1;
 }
 
-.btn-file:active span {
+.btn-file:active span,
+.previewLink:active,
+a:active,
+button:active,
+.deleteAttachment:active {
   opacity: .5;
 }
 
