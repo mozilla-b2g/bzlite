@@ -390,7 +390,7 @@ em {
 }
 
 [hidden], .hidden {
-  display: none;
+  display: none !important;
 }
 
 .attachments:empty {
@@ -646,6 +646,24 @@ input[disabled] {
 }
 #login .row input:last-child {
   margin-left: 1rem;
+}
+
+#intro span {
+  padding-top: 1rem;
+}
+
+#intro h2 {
+  text-align: center;
+  background: #EFEFEF;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #858585;
+  padding: 6rem 0 2rem 0;
+  background-image: url(/style/icons/info.png);
+  background-repeat: no-repeat;
+  background-position: center 2.2rem;
+  background-size: 3.4rem;
 }
 
 @keyframes rotate {
