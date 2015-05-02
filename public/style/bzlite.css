@@ -14,7 +14,7 @@ html, body {
 
 body {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 2.0rem;
   color: #474747;
 }
@@ -290,10 +290,6 @@ header h2 {
 
 .dashboard ul a:hover {
   background: #F9F9F9;
-}
-
-.dashboard ul {
-  font-size: 1.2rem;
 }
 
 .bugheader {
