@@ -25,7 +25,7 @@ a {
   cursor: pointer;
 }
 
-input[type=text], textarea, .btn, button {
+input[type=text], input[type=search], input[type=submit], textarea, .btn, button {
   width: 100%;
   display: block;
   border: 0;
