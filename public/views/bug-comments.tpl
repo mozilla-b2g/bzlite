@@ -15,6 +15,7 @@
       <option>RESOLVED - INCOMPLETE</option>
     </select>
     <textarea placeholder="Reply..." id="commentInput"></textarea>
+    <input type="text" placeholder="Need More Information" id="needinfo" />
     <input type="submit" value="Save Changes" />
   </form>
 </div>
