@@ -48,13 +48,41 @@ button {
   border-radius: 0;
 }
 
+input[type=button].sidebtn {
+  flex-shrink: 1;
+  border-radius: 0 .5rem .5rem 0;
+  padding: 0;
+}
+
 textarea {
   padding-top: 1rem;
 }
 
-button, .btn, input[type=submit] {
-  padding: 1rem;
+label {
+  display: block;
+  line-height: 2rem;
+  margin-right: 1rem;
 }
+
+select {
+  width: 100%;
+}
+
+input[type=button], button, .btn, input[type=submit] {
+  padding: 1rem;
+  display: block;
+  font-style: italic;
+  background: #00caf2;
+  color: white;
+  border-radius: 2em;
+  border: 0;
+}
+
+input[type=submit]:active, .btn:active {
+  background: white;
+  color: #00caf2;
+}
+
 
 textarea {
   height: 11rem;
@@ -139,6 +167,10 @@ h5 {
   background: #FFF;
   color: #666;
 }
+
+#assigned {
+  border-right: 0;
+}
 /* BUG PAGE END */
 
 .btn {
@@ -171,10 +203,6 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
   padding-top: .2rem;
 }
 
-label {
- display: block;
-}
-
 form {
   margin: 2rem 1.5rem 0 1.5rem;
 }
@@ -186,21 +214,6 @@ input, textarea, select, .btn {
 input:focus, textarea:focus {
  border-bottom: .3rem solid #00caf2;
 }
-
-input[type=submit], .btn {
-  display: block;
-  font-style: italic;
-  background: #00caf2;
-  color: white;
-  border-radius: 2em;
-  border: 0;
-}
-
-input[type=submit]:active, .btn:active {
-  background: white;
-  color: #00caf2;
-}
-
 
 input[type=search] {
   padding: .5rem;
