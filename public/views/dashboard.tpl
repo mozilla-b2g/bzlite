@@ -1,10 +1,10 @@
 <div class="dashboard">
 
-  <div class="row dashboardnav">
-    <h5 class="assigned"><a href="/dashboard/">Assigned</a></h5>
-    <h5 class="flags"><a href="/dashboard/flags/">Flags</a></h5>
-    <h5 class="flagged"><a href="/dashboard/flagged/">Flagged</a></h5>
-    <h5 class="filed"><a href="/dashboard/filed/">Filed</a></h5>
+  <div class="tabbar" id="dashboardNav">
+    <a href="/dashboard/" class="assigned">Assigned</a>
+    <a href="/dashboard/flags/" class="flags">Flags</a></h5>
+    <a href="/dashboard/flagged/" class="flagged">Flagged</a>
+    <a href="/dashboard/filed/" class="filed">Filed</a>
   </div>
 
   <ul id="bugs"></ul>

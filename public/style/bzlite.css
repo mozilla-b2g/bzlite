@@ -14,9 +14,13 @@ html, body {
 
 body {
   margin: 0;
-  font-size: 1.4rem;
-  line-height: 2.0rem;
   color: #474747;
+}
+
+
+body, input, a, textarea {
+  line-height: 2.0rem;
+  font-size: 1.4rem;
 }
 
 a {
@@ -25,7 +29,13 @@ a {
   cursor: pointer;
 }
 
-input[type=text], input[type=search], input[type=submit], textarea, .btn, button {
+input[type=text],
+input[type=search],
+input[type=submit],
+input[type=button],
+textarea,
+.btn,
+button {
   width: 100%;
   display: block;
   border: 0;
@@ -33,7 +43,6 @@ input[type=text], input[type=search], input[type=submit], textarea, .btn, button
   background: #FFF;
   text-decoration: none;
   outline: 0;
-  font-size: 1.2rem;
   line-height: 2.0rem;
   padding: 0 1rem;
   border-radius: 0;
@@ -62,16 +71,81 @@ h1, h2, h3, h4, h5 {
 }
 
 h5 {
-  font-size: 1.2rem;
   font-weight: normal;
 }
+
+/* COMMON STYLE START */
+.tabbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tabbar > * {
+  background: #EEE;
+  flex-grow: 1;
+  border-bottom: 1px solid #CCC;
+  text-align: center;
+  color: #999;
+  display: block;
+  padding: .7rem;
+}
+/* COMMON STYLE END */
+
+/* GLOBAL NAV START */
+#footerNav {
+  background: #000;
+  display: block;
+  flex-shrink: 0;
+}
+
+#footerNav li a {
+  flex-grow: 1;
+  display: block;
+  line-height: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+#footerNav li:active a {
+  background: #00caf2;
+  color: white;
+}
+
+[data-region="dashboard"] .dashboardLink a,
+[data-region="search"] .searchLink a,
+[data-region="create"] .createLink a,
+[data-region="profile"] .profileLink a {
+  color: #00caf2;
+}
+/* GLOBAL NAV END */
+
+/* DASHBOARD START */
+#dashboardNav[data-section="assigned"] .assigned,
+#dashboardNav[data-section="flags"] .flags,
+#dashboardNav[data-section="flagged"] .flagged,
+#dashboardNav[data-section="filed"] .filed {
+  border-bottom: 1px solid transparent;
+  background: #FFF;
+  color: #666;
+}
+/* DASHBOARD END */
+
+/* BUG PAGE START */
+#bugNav[data-section="details"] .detailsLink,
+#bugNav[data-section="attachments"] .attachLink,
+#bugNav[data-section="comments"] .commentsLink {
+  border-bottom: 1px solid transparent;
+  background: #FFF;
+  color: #666;
+}
+/* BUG PAGE END */
 
 .btn {
   text-align: center;
 }
 
 .headerBtn {
-  font-size: 1.4rem;
   width: 5rem;
 }
 
@@ -160,20 +234,6 @@ header a {
 }
 
 /* Main Layout*/
-.mainNavigation {
-  background: #000;
-  display: block;
-  flex-shrink: 0;
-}
-
-
-.mainNavigation ul a {
-  font-size: 1.4rem;
-  display: block;
-  line-height: 2rem;
-  padding: .5rem;
-}
-
 .title {
  padding: .5rem;
 }
@@ -276,16 +336,14 @@ header h2 {
 }
 
 .dashboard ul a {
+  display: block;
+  padding: .7rem;
   background: #FFF;
   border-bottom: 1px solid #DDD;
 }
 
-.bugnav, .dashboardnav {
+.bugnav {
   border-bottom: 1px solid #DDD;
-}
-.dashboard a, .bugnav a {
-  display: block;
-  padding: .7rem;
 }
 
 .dashboard ul a:hover {
@@ -602,13 +660,6 @@ input[disabled] {
   padding: 1rem;
   font-style: italic;
 }
-
-h5.active,
-[data-path="/dashboard/filed/"] .filed,
-[data-path="/dashboard/flags/"] .flags,
-[data-path="/dashboard/flagged/"] .flagged,
-[data-path="/dashboard/"] .assigned,
-[data-path="/"] .assigned { background-color: #EEE; }
 
 @keyframes rotate {
   from { transform: rotate(1deg); }
