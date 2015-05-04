@@ -7,7 +7,7 @@
       <input type="button" value="Take Bug" id="take" class="btn sidebtn" />
     </div>
     <div class="row">
-      <label>Status</label>
+      <label>Status:</label>
       <select id="status">
         <option>UNCONFIRMED</option>
         <option>NEW</option>

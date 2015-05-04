@@ -31,6 +31,8 @@ a {
 
 input[type=text],
 input[type=search],
+input[type=email],
+input[type=password],
 input[type=submit],
 input[type=button],
 textarea,
@@ -60,11 +62,12 @@ textarea {
 
 label {
   display: block;
-  line-height: 2rem;
+  line-height: 2.5rem;
   margin-right: 1rem;
 }
 
 select {
+  padding: .5rem;
   width: 100%;
 }
 
@@ -156,6 +159,18 @@ h5 {
   border-bottom: 1px solid transparent;
   background: #FFF;
   color: #666;
+}
+
+.dashboard ul a {
+  display: block;
+  padding: .7rem;
+  background: #FFF;
+  border-bottom: 1px solid #DDD;
+}
+
+.dashboard ul a:active,
+.dashboard ul a:hover {
+  background-color: #b1f1ff;
 }
 /* DASHBOARD END */
 
@@ -292,20 +307,25 @@ header a {
   list-style-type: none;
 }
 
-.comments .header {
-  padding: .5rem;
-}
-
 .comments div span {
   color: #999;
 }
 
 .comments p {
   white-space: pre-wrap;
-  margin: 0;
-  padding: .5rem;
-  background: white;
-  font-family: monaco,Consolas,Lucida Console,monospace;
+}
+
+.comments li:first-child {
+  padding-top: 0;
+}
+
+.comments li {
+  border-bottom: 1px solid #CCC;
+  padding: 1rem .5rem 1rem .5rem;
+}
+
+.comments li:nth-child(even) {
+  background-color: #F6F6F6;
 }
 
 .bugs {
@@ -342,25 +362,6 @@ header h2 {
   background-position: 0 center;
   background-size: 2em;
   cursor: pointer;
-}
-
-.dashboard h5 {
-  text-align: center;
-}
-
-.dashboard ul a {
-  display: block;
-  padding: .7rem;
-  background: #FFF;
-  border-bottom: 1px solid #DDD;
-}
-
-.bugnav {
-  border-bottom: 1px solid #DDD;
-}
-
-.dashboard ul a:hover {
-  background: #F9F9F9;
 }
 
 .bugheader {
