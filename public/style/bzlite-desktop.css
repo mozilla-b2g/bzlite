@@ -1,0 +1,31 @@
+.desktop {
+  display: block;
+}
+
+#wrapper {
+  flex-direction: row;
+}
+
+#footerNav {
+  order: -1;
+}
+
+#footerNav ul {
+  flex-direction: column;
+}
+
+#footerNav li a {
+  text-align: right;
+}
+
+#dashboardNav {
+  display: none;
+}
+
+[data-section="assigned"] .assigned,
+[data-section="flags"] .flags,
+[data-section="flagged"] .flagged,
+[data-section="filed"] .filed {
+  background: #333;
+  color: #FFF;
+}

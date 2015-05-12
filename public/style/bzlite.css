@@ -138,7 +138,7 @@ h5 {
   text-align: center;
 }
 
-#footerNav li:active a {
+#footerNav li a:active {
   background: #00caf2;
   color: white;
 }
@@ -152,10 +152,10 @@ h5 {
 /* GLOBAL NAV END */
 
 /* DASHBOARD START */
-#dashboardNav[data-section="assigned"] .assigned,
-#dashboardNav[data-section="flags"] .flags,
-#dashboardNav[data-section="flagged"] .flagged,
-#dashboardNav[data-section="filed"] .filed {
+[data-section="assigned"] .assigned,
+[data-section="flags"] .flags,
+[data-section="flagged"] .flagged,
+[data-section="filed"] .filed {
   border-bottom: 1px solid transparent;
   background: #FFF;
   color: #666;
@@ -673,6 +673,10 @@ input[disabled] {
   text-align: center;
   padding: 1rem;
   font-style: italic;
+}
+
+.desktop {
+  display: none;
 }
 
 @keyframes rotate {
