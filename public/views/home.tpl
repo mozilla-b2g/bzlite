@@ -2,6 +2,8 @@
 
   <div id="content"></div>
 
+  <div id="secondScreen" class="desktop"></div>
+
   <div class="mainNavigation" id="footerNav">
     <ul class="row">
       <li class="dashboardLink">

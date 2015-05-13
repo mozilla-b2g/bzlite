@@ -29,3 +29,32 @@
   background: #333;
   color: #FFF;
 }
+
+#content, #secondScreen {
+  width: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+#content {
+  border-right: 1px solid #CCC;
+}
+
+#secondScreen {
+  background: #EEE;
+}
+
+.comments .comment {
+  background: #FFF;
+  border: 1px solid #CCC;
+  padding: 1rem;
+}
+
+.comments li {
+  border: none;
+  padding: 1rem;
+}
+
+.comments li:nth-child(2n) {
+  background-color: transparent;
+}
