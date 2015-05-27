@@ -1,6 +1,6 @@
 {
   "version": "0.0.3",
-  "name": "Bugilla Lite",
+  "name": "Bugzilla Lite",
   "description": "Mobile app for Bugzilla",
   "launch_path": "/",
   "developer": {
