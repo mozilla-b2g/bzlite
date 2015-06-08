@@ -1,5 +1,11 @@
 <div>
 
+  <header>
+    <span class="headerBtn close"></span>
+    <h2>Login</h2>
+    <span class="headerBtn"></span>
+  </header>
+
   <form id="login">
     <input type="email" placeholder="Email Address" />
     <input type="password" placeholder="Password" />
