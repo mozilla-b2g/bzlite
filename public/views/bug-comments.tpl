@@ -1,9 +1,8 @@
 <div>
   <ul id="comments"></ul>
   <form>
-    <label>Assigned:</label>
     <div class="row">
-      <input type="text" id="assigned" />
+      <div>Assigned:<br /><input type="text" id="assigned" /></div>
       <input type="button" value="Take Bug" id="take" class="btn sidebtn" />
     </div>
     <div class="row">
@@ -19,7 +18,7 @@
       </select>
     </div>
     <textarea placeholder="Reply..." id="commentInput"></textarea>
-    <input type="text" placeholder="Need More Information" id="needinfo" />
+    <input type="text" placeholder="Need More Information" id="needinfo" style="display: none" />
     <input type="submit" value="Save Changes" />
   </form>
 </div>
