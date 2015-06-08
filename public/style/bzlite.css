@@ -15,6 +15,7 @@ html, body {
 body {
   margin: 0;
   color: #474747;
+  background: #F4F4F4;
 }
 
 
@@ -52,7 +53,7 @@ button {
 
 input[type=button].sidebtn {
   flex-shrink: 1;
-  border-radius: 0 .5rem .5rem 0;
+  border-radius: .5rem;
   padding: 0;
 }
 
@@ -113,13 +114,16 @@ h5 {
 }
 
 .tabbar > * {
-  background: #EEE;
   flex-grow: 1;
-  border-bottom: 1px solid #CCC;
+  border-top: 1px solid #CCC;
   text-align: center;
   color: #999;
   display: block;
   padding: .7rem;
+}
+
+.tabbar > *:hover, .tabbar > *:active {
+  background-color: #b1f1ff;
 }
 /* COMMON STYLE END */
 
@@ -152,19 +156,23 @@ h5 {
 /* GLOBAL NAV END */
 
 /* DASHBOARD START */
+.dashboard, .bugPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 [data-section="assigned"] .assigned,
 [data-section="flags"] .flags,
 [data-section="flagged"] .flagged,
 [data-section="filed"] .filed {
-  border-bottom: 1px solid transparent;
-  background: #FFF;
-  color: #666;
+  border-bottom: .3rem solid #00AACC;
+  color: #00AACC;
 }
 
 .dashboard ul a {
   display: block;
   padding: .7rem;
-  background: #FFF;
   border-bottom: 1px solid #DDD;
 }
 
@@ -172,19 +180,54 @@ h5 {
 .dashboard ul a:hover {
   background-color: #b1f1ff;
 }
+
+#bugsWrapper, .bugWrapper {
+  flex-grow: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.bugWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.bugContentWrapper {
+  flex: 1;
+}
 /* DASHBOARD END */
 
 /* BUG PAGE START */
 #bugNav[data-section="details"] .detailsLink,
 #bugNav[data-section="attachments"] .attachLink,
 #bugNav[data-section="comments"] .commentsLink {
-  border-bottom: 1px solid transparent;
-  background: #FFF;
-  color: #666;
+  border-bottom: .3rem solid #00AACC;
+  color: #00AACC;
 }
 
 #assigned {
-  border-right: 0;
+  border: 0;
+  padding: 0;
+  line-height: 2rem;
+  height: 2rem;
+  background: transparent;
+}
+
+#take {
+  width: 10rem;
+}
+
+#bugContent {
+  flex-grow: 1;
+}
+
+.attachmentView {
+  margin-top: 1rem;
+  border-top: .1rem solid #CCC;
+}
+.attachmentView li {
+  padding: 1rem;
+  border-bottom: .1rem solid #CCC;
 }
 /* BUG PAGE END */
 
@@ -193,7 +236,10 @@ h5 {
 }
 
 .headerBtn {
-  width: 5rem;
+  width: 4rem;
+  background-repeat: no-repeat;
+  background-size: 3rem;
+  background-position: left center;
 }
 
 .loginScreen .headerBtn {
@@ -324,7 +370,7 @@ header a {
 }
 
 .comments li:nth-child(even) {
-  background-color: #F6F6F6;
+  background-color: white;
 }
 
 .bugs {
@@ -503,7 +549,6 @@ em {
 }
 
 .bugDetails li label, .bugDetails li span {
-  width: 50%;
   flex-grow: 1;
 }
 
@@ -531,9 +576,22 @@ em {
 
 .close {
   background-image: url(icons/close.png);
-  background-repeat: no-repeat;
-  background-size: 1.5em;
-  background-position: left center;
+}
+
+.add {
+  background-image: url(icons/add.png);
+}
+
+.profile {
+  background-image: url(icons/user.png);
+}
+
+.back {
+  background-image: url(icons/back.png);
+}
+
+.right {
+  background-position: right center;
 }
 
 .attach {
@@ -672,6 +730,14 @@ input[disabled] {
   text-align: center;
   padding: 1rem;
   font-style: italic;
+}
+
+.profileContent {
+  padding: 1rem;
+}
+
+#needinfo {
+  display: none;
 }
 
 .desktop {

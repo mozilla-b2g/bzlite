@@ -1,5 +1,11 @@
 <div>
 
+  <header>
+    <a href="/" class="headerBtn close"></a>
+    <h2>File a bug</h2>
+    <span class="headerBtn"></span>
+  </header>
+
   <form id="createBug">
     <input type="text" placeholder="Title" id="summary" />
     <input list="components" id="component" value="Gaia::Feedback" disabled hidden />
