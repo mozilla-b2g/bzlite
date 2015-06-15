@@ -1,7 +1,7 @@
 <div class="bugPage">
 
   <header>
-    <a href="/" class="headerBtn back"></a>
+    <a href="/" class="headerBtn back" data-ctx-capture="true"></a>
     <h2>Bug <span class="id"></span></h2>
     <span class="headerBtn"></span>
   </header>
@@ -16,9 +16,9 @@
     </div>
 
     <div class="tabbar" id="bugNav">
-      <a class="commentsLink">Comments</a>
-      <a class="detailsLink">Details</a>
-      <a class="attachLink">Attachments</a>
+      <a class="commentsLink" data-ctx-capture="true">Comments</a>
+      <a class="detailsLink" data-ctx-capture="true">Details</a>
+      <a class="attachLink" data-ctx-capture="true">Attachments</a>
     </div>
 
   </div>
