@@ -19,7 +19,7 @@ body {
 }
 
 
-body, input, a, textarea {
+body, input, a, textarea, button {
   line-height: 2.0rem;
   font-size: 1.4rem;
 }
@@ -86,7 +86,6 @@ input[type=submit]:active, .btn:active {
   background: white;
   color: #00caf2;
 }
-
 
 textarea {
   height: 11rem;
@@ -457,7 +456,7 @@ em {
 }
 
 [hidden], .hidden {
-  display: none;
+  display: none !important;
 }
 
 .attachments:empty {
@@ -742,6 +741,31 @@ input[disabled] {
 
 .desktop {
   display: none;
+}
+
+#intro span {
+  padding-top: 1rem;
+  background: none;
+}
+
+#intro h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #858585;
+  padding: 6rem 0 1rem 0;
+  margin: 0 2rem;
+  background-color: none;
+  background-image: url(/style/icons/info.png);
+  background-repeat: no-repeat;
+  background-position: center 2.2rem;
+  background-size: 3.4rem;
+  border-bottom: .1rem solid #DDD;
+}
+
+#intro-submit {
+  border-radius: 0;
 }
 
 @keyframes rotate {
