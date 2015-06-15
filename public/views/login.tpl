@@ -1,7 +1,7 @@
 <div>
 
   <header>
-    <span class="headerBtn close"></span>
+    <span class="headerBtn close" data-btn="true"></span>
     <h2>Login</h2>
     <span class="headerBtn"></span>
   </header>
