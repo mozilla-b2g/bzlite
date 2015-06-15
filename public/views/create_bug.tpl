@@ -1,7 +1,7 @@
 <div>
 
   <header>
-    <a href="/" class="headerBtn close"></a>
+    <a href="/" class="headerBtn close" data-btn="true"></a>
     <h2>File a bug</h2>
     <span class="headerBtn"></span>
   </header>

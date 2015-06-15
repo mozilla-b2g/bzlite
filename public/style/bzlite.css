@@ -191,9 +191,6 @@ h5 {
   flex-direction: column;
 }
 
-.bugContentWrapper {
-  flex: 1;
-}
 /* DASHBOARD END */
 
 /* BUG PAGE START */
@@ -733,6 +730,10 @@ input[disabled] {
 
 .profileContent {
   padding: 1rem;
+}
+
+.profileContent a.warning {
+  margin-top: 1rem;
 }
 
 #needinfo {
