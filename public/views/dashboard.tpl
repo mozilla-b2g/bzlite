@@ -15,7 +15,7 @@
 
   <div class="tabbar" id="dashboardNav">
     <a href="/dashboard/" class="assigned">Assigned</a>
-    <a href="/dashboard/flags/" class="flags">Flags</a>
+    <a href="/dashboard/flagged/" class="flags">Flagged</a>
     <a href="/dashboard/filed/" class="filed">Filed</a>
   </div>
 
