@@ -733,6 +733,10 @@ input[disabled] {
   padding: 1rem;
 }
 
+.profileContent a.warning {
+  margin-top: 1rem;
+}
+
 #needinfo {
   display: none;
 }
