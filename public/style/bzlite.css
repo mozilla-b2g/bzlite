@@ -53,7 +53,6 @@ button {
 
 input[type=button].sidebtn {
   flex-shrink: 1;
-  border-radius: .5rem;
   padding: 0;
 }
 
@@ -118,11 +117,11 @@ h5 {
   text-align: center;
   color: #999;
   display: block;
-  padding: .7rem;
+  padding: 1rem;
 }
 
 .tabbar > *:hover, .tabbar > *:active {
-  background-color: #b1f1ff;
+  color: rgba(153, 153, 153, .5);
 }
 /* COMMON STYLE END */
 
@@ -237,8 +236,13 @@ h5 {
 .headerBtn {
   width: 4rem;
   background-repeat: no-repeat;
-  background-size: 3rem;
+  background-size: 3.2rem;
   background-position: left center;
+  outline: none;
+}
+
+.headerBtn:active {
+  opacity: .5;
 }
 
 .loginScreen .headerBtn {
@@ -732,11 +736,11 @@ input[disabled] {
 }
 
 .profileContent {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .profileContent a.warning {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 #needinfo {
