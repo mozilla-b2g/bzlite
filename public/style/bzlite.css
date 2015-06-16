@@ -228,6 +228,11 @@ h5 {
   padding: 1rem;
   border-bottom: .1rem solid #CCC;
 }
+
+.attachmentView a {
+  color: #00AACC;
+}
+
 /* BUG PAGE END */
 
 .btn {
