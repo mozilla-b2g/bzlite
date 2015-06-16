@@ -1,3 +1,3 @@
 <li>
-  <span class="name">hello</span>
+  <a class="name" target="_blank"></a>
 </li>
