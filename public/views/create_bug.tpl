@@ -20,4 +20,18 @@
     <input type="submit" value="Submit Bug" />
   </form>
 
+  <div id="pickAttachments">
+
+    <header>
+      <h2>Select Files</h2>
+    </header>
+
+    <form id="pickAttachmentsForm">
+      <p>Select the files you want to attach to the bug</p>
+      <div id="attachments"></div>
+      <input type="submit" value="Attach" />
+    </form>
+
+  </div>
+
 </div>
