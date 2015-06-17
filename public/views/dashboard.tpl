@@ -9,6 +9,7 @@
   </header>
 
   <div id="bugsWrapper">
+    <a href="/search/" id="searchLink"><span>Search</span></a>
     <div class="loading"></div>
     <ul id="bugs"></ul>
   </div>
