@@ -778,6 +778,41 @@ input[disabled] {
   border-radius: 0;
 }
 
+#search {
+  display: flex;
+  flex-direction: row;
+}
+
+#search a {
+  color: #00AACC;
+  padding: .7rem 0 .7rem 1.5rem;
+  font-style: italic;
+}
+
+#search input {
+  flex-shrink: 1;
+}
+
+#search .close {
+  flex-grow: 1;
+}
+
+#searchLink {
+  display: block;
+  background: white;
+}
+
+#searchLink span {
+  display: block;
+  padding: 0.5rem;
+  color: black;
+  background-image: url(/style/icons/noun_15028.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 2em;
+  opacity: .3;
+}
+
 @keyframes rotate {
   from { transform: rotate(1deg); }
   to   { transform: rotate(360deg); }
