@@ -18,7 +18,6 @@ body {
   background: #F4F4F4;
 }
 
-
 body, input, a, textarea, button {
   line-height: 2.0rem;
   font-size: 1.4rem;
@@ -63,7 +62,6 @@ textarea {
 label {
   display: block;
   line-height: 2.5rem;
-  margin-right: 1rem;
 }
 
 select {
@@ -810,6 +808,49 @@ input[disabled] {
   background-position: right center;
   background-size: 2em;
   opacity: .3;
+}
+
+#pickAttachments {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #F4F4F4;
+}
+
+#pickAttachmentsForm p {
+  margin-bottom: 1.5rem;
+}
+
+#pickAttachmentsForm label span {
+  display: block;
+  padding: .7rem 0;
+  width: 100%;
+  border-top: 1px solid #DDD;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+}
+
+#attachments {
+  border-bottom: 1px solid #DDD;
+}
+
+#pickAttachmentsForm label:last-child span {
+  border-bottom: 0;
+}
+
+#pickAttachmentsForm label input[type=checkbox] {
+  display: none;
+}
+
+#pickAttachmentsForm input[type=checkbox]:checked + span {
+  background-image: url(/style/icons/checked.png);
+}
+
+#pickAttachmentsForm input[type=submit] {
+  margin-top: 1.5rem;
 }
 
 @keyframes rotate {
