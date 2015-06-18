@@ -15,10 +15,14 @@ From a local checkout of the bzlite repository:
 A local copy of Bugzilla will now be running at http://127.0.0.1:3000.
 There are a few options you can provide to startup.
 
- * TEST=1 - Run against https://bugzilla-dev.allizom.org/
- * VERSION=1 - An ultra minimal version that only allows bug filing
  * PORT=1234 - Run on a custom port
+ * TEST=1 - Run against https://bugzilla-dev.allizom.org/
 
+If you run a test version, you can either ask for an account
+in irc://irc.mozilla.org/#bmo or use
+
+  username : dale+bzlite@arandomurl.com
+  password : eU3uBeZzamm4
 
 Running Bugzilla Lite Tests
 ---------------------------
