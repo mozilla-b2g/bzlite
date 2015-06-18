@@ -21,8 +21,8 @@ There are a few options you can provide to startup.
 If you run a test version, you can either ask for an account
 in irc://irc.mozilla.org/#bmo or use
 
-  username : dale+bzlite@arandomurl.com
-  password : eU3uBeZzamm4
+    username: dale+bzlite@arandomurl.com
+    password: eU3uBeZzamm4
 
 Running Bugzilla Lite Tests
 ---------------------------
