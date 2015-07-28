@@ -633,6 +633,10 @@ input[disabled] {
   opacity: .5;
 }
 
+input[type=submit][disabled] {
+  background: #CCC;
+}
+
 .dialog, .alert {
   display: flex;
   align-items: center;
