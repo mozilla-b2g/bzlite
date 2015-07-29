@@ -821,6 +821,7 @@ input[type=submit][disabled] {
   bottom: 0;
   right: 0;
   background: #F4F4F4;
+  z-index: 100;
 }
 
 #pickAttachmentsForm p {
