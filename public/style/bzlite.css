@@ -234,7 +234,8 @@ h5 {
 }
 
 .headerBtn {
-  width: 4rem;
+  width: 5rem;
+  line-height: 5rem;
   background-repeat: no-repeat;
   background-size: 3.2rem;
   background-position: left center;
