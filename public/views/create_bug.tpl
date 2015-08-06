@@ -3,7 +3,7 @@
   <header>
     <a href="/" class="headerBtn close" data-ctx-capture="true"></a>
     <h2>File a bug</h2>
-    <span class="headerBtn"></span>
+    <a class="headerBtn" id="submit">Submit</span>
   </header>
 
   <form id="createBug">
@@ -16,8 +16,6 @@
       <span>Add an Attachment</span>
     </span>
     <ul class="attachments"></ul>
-
-    <input type="submit" value="Submit Bug" />
   </form>
 
   <div id="pickAttachments" class="hidden">
