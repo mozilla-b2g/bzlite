@@ -168,7 +168,7 @@ h5 {
 
 .dashboard ul a {
   display: block;
-  padding: .7rem;
+  padding: 1.5rem;
   border-bottom: 1px solid #DDD;
 }
 
@@ -234,7 +234,7 @@ h5 {
 }
 
 .headerBtn {
-  width: 5rem;
+  width: 4rem;
   line-height: 5rem;
   background-repeat: no-repeat;
   background-size: 3.2rem;
@@ -802,11 +802,11 @@ input[type=submit][disabled] {
 }
 
 #searchLink div {
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
   color: black;
   background-image: url(/style/icons/noun_15028.svg);
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right 1.5rem center;
   background-size: 2em;
   opacity: .3;
 }
