@@ -3,7 +3,7 @@
   <header>
     <a href="/" class="headerBtn close" data-ctx-capture="true"></a>
     <h2>File a bug</h2>
-    <a class="headerBtn" id="submit">Submit</span>
+    <a class="headerBtn" id="submit">Submit</a>
   </header>
 
   <form id="createBug">
