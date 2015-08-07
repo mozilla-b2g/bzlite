@@ -16,7 +16,7 @@
   </div>
 
   <div class="tabbar" id="dashboardNav">
-    <a href="/dashboard/" class="assigned" data-ctx-capture="true">Assigned</a>
+    <a href="/dashboard/assigned/" class="assigned" data-ctx-capture="true">Assigned</a>
     <a href="/dashboard/flagged/" class="flagged" data-ctx-capture="true">Flagged</a>
     <a href="/dashboard/filed/" class="filed" data-ctx-capture="true">Filed</a>
   </div>
