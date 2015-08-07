@@ -1,7 +1,12 @@
 <div>
 
   <form id="search">
-    <input type="search" placeholder="Search Bugzilla" />
+
+    <div class="search">
+      <input placeholder="Search Bugzilla" type="search">
+      <div class="focus"></div>
+    </div>
+
     <a href="/" data-ctx-capture="true">Cancel</a>
   </form>
 

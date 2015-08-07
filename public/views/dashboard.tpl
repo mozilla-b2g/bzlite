@@ -8,9 +8,10 @@
     <a href="/profile/" class="headerBtn profile right" data-ctx-capture="true"></a>
   </header>
 
+
   <div id="bugsWrapper">
     <a href="/search/" id="searchLink"><div>Search</div></a>
-    <div class="loading"></div>
+    <div class="progress"></div>
     <ul id="bugs"></ul>
   </div>
 
