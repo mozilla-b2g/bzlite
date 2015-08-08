@@ -15,4 +15,6 @@
     </div>
   </form>
 
+  <div class="bugzillaAuth">Or login via <a id="bugzillaLink">Bugzilla</a></div>
+
 </div>
