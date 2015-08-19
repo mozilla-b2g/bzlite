@@ -7,7 +7,7 @@
   </header>
 
   <div class="bugWrapper">
-    <div class="progress"></div>
+    <div class="progressWrapper"><div class="progress"></div></div>
     <h3 class="title"></h3>
     <div id="bugContent">
     </div>
