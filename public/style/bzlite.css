@@ -184,6 +184,7 @@ h5 {
 }
 
 .bugWrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -901,4 +902,10 @@ input[type=search]:focus + .focus {
 
 .bugzillaAuth {
   text-align: center;
+}
+
+.progressWrapper {
+  position: absolute;
+  height: .4rem;
+  width: 100%;
 }
