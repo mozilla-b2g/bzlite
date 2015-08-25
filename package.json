@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/*_test.js",
+    "test": "TEST=1 npm run build && mocha test/*_test.js",
     "watch": "watchify index.js -t envify -o public/js/bundle.js -v",
     "build": "browserify index.js  -t envify > public/js/bundle.js",
     "build-manifest": "appcachegen public -o public/manifest.appcache",
