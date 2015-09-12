@@ -14,21 +14,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.11.2",
     "appcachegen": "0.0.3",
-    "nodemon": "^1.3.7",
+    "body-parser": "^1.13.3",
     "browserify": "^8.1.3",
-    "watchify": "^2.3.0",
-    "lie": "^2.8.1",
-    "inherits": "^2.0.1",
-    "page": "^1.6.1",
-    "timeago": "^0.2.0",
-    "selenium-standalone": "^4.1.0",
-    "mocha": "^2.1.0",
-    "wd": "^0.3.11",
     "envify": "^3.3.1",
+    "express": "^4.11.2",
     "filesize": "^3.1.2",
-    "localforage": "^1.2.2"
+    "inherits": "^2.0.1",
+    "lie": "^2.8.1",
+    "localforage": "^1.2.2",
+    "mocha": "^2.1.0",
+    "nodemon": "^1.3.7",
+    "page": "^1.6.1",
+    "selenium-standalone": "^4.1.0",
+    "timeago": "^0.2.0",
+    "watchify": "^2.3.0",
+    "wd": "^0.3.11"
   },
   "browser": {
     "request": "./lib/request-browser.js"
