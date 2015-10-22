@@ -79,10 +79,14 @@ describe('Basic Tests', function() {
   });
 
   it('Test basic create a bug flow', function() {
+
     this.timeout(0);
+
     return browser.title().then(function(title) {
       assert.equal(title, 'Bugzilla Lite');
       return login();
+
+      // Create a new bug
     }).then(function() {
       return $('[href="/create/"]');
     }).then(function(createLink) {
@@ -100,8 +104,21 @@ describe('Basic Tests', function() {
     }).then(function(title) {
       return title.text();
     }).then(function(titleText) {
+      // We successfully posted a bug!
       assert(/Bug Title/.test(titleText));
+
+      // Check that we cannot change the status without permission
+      return $('#status option:nth-child(2)');
+    }).then(function(statusOption) {
+      statusOption.click();
+      return $('input[type=submit]');
+    }).then(function(submitBtn) {
+      submitBtn.click();
+      return pause();
+    }).then(function() {
+      return browser.acceptAlert();
     });
+
   });
 
 })
