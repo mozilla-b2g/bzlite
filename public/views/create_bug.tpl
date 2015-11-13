@@ -7,7 +7,8 @@
   </header>
 
   <form id="createBug">
-    <input type="text" placeholder="Title" id="summary" />
+    <input type="text" placeholder="Title" id="summary"
+           inputmode="latin-prose" x-inputmode="latin-prose" />
     <input list="components" id="component" value="Gaia::Feedback" disabled hidden />
     <textarea placeholder="Description" id="description" ></textarea>
 
