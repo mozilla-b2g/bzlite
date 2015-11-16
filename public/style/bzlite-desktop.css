@@ -18,18 +18,6 @@
   text-align: right;
 }
 
-#dashboardNav {
-  display: none;
-}
-
-[data-section="assigned"] .assigned,
-[data-section="flags"] .flags,
-[data-section="flagged"] .flagged,
-[data-section="filed"] .filed {
-  background: #333;
-  color: #FFF;
-}
-
 #content, #secondScreen {
   width: 0;
   flex-grow: 1;
