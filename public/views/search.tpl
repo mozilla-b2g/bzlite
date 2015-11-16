@@ -1,6 +1,6 @@
 <div>
 
-  <form id="search">
+  <div id="search">
 
     <div class="search">
       <input placeholder="Search Bugzilla" type="search">
@@ -8,7 +8,7 @@
     </div>
 
     <a href="/" data-ctx-capture="true">Cancel</a>
-  </form>
+  </div>
 
   <div class="bugs"></div>
 

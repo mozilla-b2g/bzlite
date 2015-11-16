@@ -776,6 +776,7 @@ input[type=submit][disabled] {
 #search {
   display: flex;
   flex-direction: row;
+  margin: 2rem 1.5rem 0 1.5rem;
 }
 
 #search a {
