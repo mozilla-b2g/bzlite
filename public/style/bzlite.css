@@ -85,6 +85,10 @@ input[type=submit]:active, .btn:active {
   color: #00caf2;
 }
 
+input[disabled]:active {
+  color: white;
+}
+
 textarea {
   height: 11rem;
 }
@@ -626,7 +630,7 @@ input[disabled] {
   opacity: .5;
 }
 
-input[type=submit][disabled] {
+input[type=submit][disabled], input[type=button][disabled] {
   background: #CCC;
 }
 

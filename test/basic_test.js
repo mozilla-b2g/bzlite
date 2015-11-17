@@ -75,7 +75,9 @@ describe('Basic Tests', function() {
   });
 
   beforeEach(function() {
-    return browser.get('http://127.0.0.1:3035');
+    return browser
+      .setWindowSize(320, 480)
+      .get('http://127.0.0.1:3035');
   });
 
   it('Test basic create a bug flow', function() {
