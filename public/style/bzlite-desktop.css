@@ -46,3 +46,22 @@
 .comments li:nth-child(2n) {
   background-color: transparent;
 }
+
+#navigation {
+  background: black;
+  padding: 0;
+  margin: 0;
+}
+
+#navigation a {
+  display: block;
+  padding: 1rem;
+}
+
+#navigation a:hover {
+  background: #333;
+}
+
+.mobile {
+  display: none !important;
+}

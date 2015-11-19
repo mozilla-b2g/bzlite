@@ -1,5 +1,14 @@
 <div id="wrapper">
 
+  <ul id="navigation" class="desktop">
+    <li class="assignedLink"><a href="/dashboard/assigned/">Assigned</a>
+    <li class="flaggedLink"><a href="/dashboard/flagged/">Flagged</a>
+    <li class="filedLink"><a href="/dashboard/filed/">Filed</a>
+    <li class="searchLink"><a href="/search/">Search</a>
+    <li class="profileLink"><a href="/profile/">Profile</a>
+    <li class="createLink"><a href="/create/">Create</a>
+  </ul>
+
   <div id="content"></div>
 
   <div id="secondScreen" class="desktop"></div>

@@ -1,6 +1,6 @@
 <div class="dashboard">
 
-  <header>
+  <header class="mobile">
     <span class="headerBtn"></span>
     <span class="headerBtn"></span>
     <h2>Bugzilla Lite</h2>
@@ -10,12 +10,12 @@
 
 
   <div id="bugsWrapper">
-    <a href="/search/" id="searchLink"><div>Search</div></a>
+    <a href="/search/" id="searchLink" class="mobile"><div>Search</div></a>
     <div class="progress"></div>
     <ul id="bugs"></ul>
   </div>
 
-  <div class="tabbar" id="dashboardNav">
+  <div class="tabbar mobile" id="dashboardNav">
     <a href="/dashboard/assigned/" class="assigned" data-ctx-capture="true">Assigned</a>
     <a href="/dashboard/flagged/" class="flagged" data-ctx-capture="true">Flagged</a>
     <a href="/dashboard/filed/" class="filed" data-ctx-capture="true">Filed</a>
