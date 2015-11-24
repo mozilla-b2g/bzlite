@@ -7,7 +7,6 @@
       <div class="focus"></div>
     </div>
 
-    <a href="/" data-ctx-capture="true">Cancel</a>
   </div>
 
   <div class="bugs"></div>

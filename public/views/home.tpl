@@ -1,13 +1,11 @@
 <div id="wrapper">
 
-  <ul id="navigation" class="desktop">
-    <li class="assignedLink"><a href="/dashboard/assigned/">Assigned</a>
-    <li class="flaggedLink"><a href="/dashboard/flagged/">Flagged</a>
-    <li class="filedLink"><a href="/dashboard/filed/">Filed</a>
-    <li class="searchLink"><a href="/search/">Search</a>
-    <li class="profileLink"><a href="/profile/">Profile</a>
-    <li class="createLink"><a href="/create/">Create</a>
-  </ul>
+  <div id="navigation" class="tabbar">
+    <a href="/" class="dashboardLink">Dashboard</a>
+    <a class="searchLink" href="/search/">Search</a>
+    <a class="profileLink" href="/profile/">Profile</a>
+    <a class="createLink" href="/create/">Create</a>
+  </div>
 
   <div id="content"></div>
 

@@ -1,7 +1,7 @@
 <div>
 
   <header>
-    <a href="/" class="headerBtn close" data-ctx-capture="true"></a>
+    <a class="headerBtn"></a>
     <h2>File a Bug</h2>
     <a class="headerBtn" id="submit">Submit</a>
   </header>

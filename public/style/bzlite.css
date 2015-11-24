@@ -147,13 +147,10 @@ h5 {
   color: white;
 }
 
-[data-region="dashboard"] .dashboardLink a,
-[data-region="search"] .searchLink a,
-[data-region="create"] .createLink a,
-[data-region="profile"] .profileLink a,
-[data-region="assigned"] .assignedLink a,
-[data-region="flagged"] .flaggedLink a,
-[data-region="filed"] .filedLink a {
+[data-region="dashboard"] .dashboardLink,
+[data-region="search"] .searchLink,
+[data-region="create"] .createLink,
+[data-region="profile"] .profileLink {
   color: #00caf2;
 }
 /* GLOBAL NAV END */
@@ -179,6 +176,10 @@ h5 {
   border-bottom: 1px solid #DDD;
 }
 
+.dashboard ul a:last-child {
+  border-bottom: 0;
+}
+
 .dashboard ul a:active,
 .dashboard ul a:hover {
   background-color: #b1f1ff;
@@ -194,6 +195,14 @@ h5 {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+#bugsWrapper h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 1rem 1.5rem 0 1.5rem;
+  font-size: 1.2rem;
+  color: #00AACC;
 }
 
 /* DASHBOARD END */
@@ -916,4 +925,13 @@ input[type=search]:focus + .focus {
   position: absolute;
   height: .4rem;
   width: 100%;
+}
+
+#navigation {
+  background: black;
+  order: 2;
+}
+
+#navigation a:hover {
+  background: #333;
 }

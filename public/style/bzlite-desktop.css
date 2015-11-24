@@ -48,18 +48,14 @@
 }
 
 #navigation {
-  background: black;
-  padding: 0;
-  margin: 0;
+  order: 0;
+  flex-direction: column;
+  display: block;
+  text-align: right;
 }
 
 #navigation a {
-  display: block;
-  padding: 1rem;
-}
-
-#navigation a:hover {
-  background: #333;
+  text-align: right;
 }
 
 .mobile {
