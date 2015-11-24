@@ -47,7 +47,7 @@ function login() {
     return $('[type="submit"]');
   }).then(function (el) {
     el.click();
-    return $('.profile');
+    return $('#assignedBugs');
   }).then(function (el) {
     assert(el.isDisplayed());
   });
