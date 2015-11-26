@@ -1,6 +1,7 @@
 <div class="bugDetails">
 
   <ul>
+    <li class="component"><label>Component</label><span></span></li>
     <li class="filedon"><label>Filed On</label><span></span></li>
     <li class="filedby"><label>Filed By</label><span></span></li>
     <li class="lastmodified"><label>Last Modified</label><span></span></li>
