@@ -9,7 +9,7 @@
   <form id="createBug">
     <input type="text" placeholder="Title" id="summary"
            inputmode="latin-prose" x-inputmode="latin-prose" />
-    <input list="components" id="component" value="Gaia::Feedback" disabled hidden />
+    <input type="text" id="component" value="Firefox OS - Gaia::Feedback" />
     <textarea placeholder="Description" id="description" ></textarea>
 
     <span class="btn-file attachBtn attach">
@@ -17,6 +17,9 @@
       <span>Add an Attachment</span>
     </span>
     <ul class="attachments"></ul>
+
+    <datalist id="componentList"></datalist>
+
   </form>
 
   <div id="pickAttachments" class="hidden">

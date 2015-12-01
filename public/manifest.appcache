@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Thu Nov 26 2015 16:28:42 GMT+0100 (CET)
+# Tue Dec 01 2015 17:33:27 GMT+0100 (CET)
 
 /activity.html
 /index.html
@@ -23,14 +23,14 @@ CACHE MANIFEST
 /views/view-attachment-row.tpl
 /style/bzlite-desktop.css
 /style/bzlite.css
-/style/icons/attach.png
 /style/icons/add.png
+/style/icons/attach.png
 /style/icons/back.png
 /style/icons/bzlite_126.png
-/style/icons/bzlite_189.png
 /style/icons/bzlite_142.png
-/style/icons/checked.png
 /style/icons/bzlite_84.png
+/style/icons/bzlite_189.png
+/style/icons/checked.png
 /style/icons/close.png
 /style/icons/info.png
 /style/icons/loading.png
