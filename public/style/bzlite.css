@@ -935,3 +935,22 @@ input[type=search]:focus + .focus {
 #navigation a:hover {
   background: #333;
 }
+
+div.input {
+  position: relative;
+}
+
+div.cleanInput {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  width: 2.4rem;
+  height: 4rem;
+  background: url(/style/icons/remove.png) no-repeat;
+  background-size: 2.4rem;
+  background-position: center right;
+}
+
+div.cleanInput:hover {
+  opacity: .75;
+}
