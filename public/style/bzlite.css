@@ -893,7 +893,7 @@ input[type=submit][disabled], input[type=button][disabled] {
 }
 
 input[type=search] {
-  line-height: 3.5rem;
+  line-height: 4rem;
   border: 0;
   padding: 0 1.5rem;
   margin: 0;
@@ -943,4 +943,23 @@ input[type=search]:focus + .focus {
 .bugDetail {
   margin: .3rem 1rem;
   color: #999;
+}
+
+div.input {
+  position: relative;
+}
+
+div.cleanInput {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  width: 2.4rem;
+  height: 4rem;
+  background: url(/style/icons/remove.png) no-repeat;
+  background-size: 2.4rem;
+  background-position: center right;
+}
+
+div.cleanInput:hover {
+  opacity: .75;
 }
