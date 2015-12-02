@@ -7,11 +7,16 @@
   </header>
 
   <form id="createBug">
-    <input type="text" placeholder="Title" id="summary"
-           inputmode="latin-prose" x-inputmode="latin-prose" />
+    <div class="input">
+      <input type="text" placeholder="Title" id="summary"
+             inputmode="latin-prose" x-inputmode="latin-prose" />
+      <div id="cleanSummary" class="cleanInput"></div>
+    </div>
     <input type="text" id="component" value="Firefox OS - Gaia::Feedback" />
-    <textarea placeholder="Description" id="description" ></textarea>
-
+    <div class="input">
+      <textarea placeholder="Description" id="description" ></textarea>
+      <div id="cleanDescription" class="cleanInput"></div>
+    </div>
     <span class="btn-file attachBtn attach">
       <input type="file" multiple />
       <span>Add an Attachment</span>
