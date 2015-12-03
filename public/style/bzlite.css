@@ -339,7 +339,7 @@ header a {
   overflow-y: auto;
 }
 
-.details, .comments div, .row {
+.details, .header, .row {
  display: flex;
  flex-direction: row;
  justify-content: space-between;
@@ -934,4 +934,13 @@ input[type=search]:focus + .focus {
 
 #navigation a:hover {
   background: #333;
+}
+
+.bugDetail, .bugDetail a {
+  font-size: 1.2rem;
+}
+
+.bugDetail {
+  margin: .3rem 1rem;
+  color: #999;
 }
