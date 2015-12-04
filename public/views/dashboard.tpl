@@ -8,7 +8,7 @@
     <ul id="flaggedBugs"></ul>
 
     <h3>Flags Requested by You</h3>
-    <ul id="filedBugs"></ul>
+    <ul id="flagBugs"></ul>
   </div>
 
 </div>
