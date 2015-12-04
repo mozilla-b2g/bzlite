@@ -2,19 +2,13 @@
 
   <div id="bugsWrapper">
     <h3>Assigned</h3>
-    <ul id="assignedBugs">
-      <li class="loading"></li>
-    </ul>
+    <ul id="assignedBugs"></ul>
 
     <h3>Flags Requested of You</h3>
-    <ul id="flaggedBugs">
-      <li class="loading"></li>
-    </ul>
+    <ul id="flaggedBugs"></ul>
 
-    <h3>Filed</h3>
-    <ul id="filedBugs">
-      <li class="loading"></li>
-    </ul>
+    <h3>Flags Requested by You</h3>
+    <ul id="filedBugs"></ul>
   </div>
 
 </div>
