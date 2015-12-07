@@ -756,10 +756,6 @@ input[type=submit][disabled], input[type=button][disabled] {
   margin-top: 1.5rem;
 }
 
-#needinfo {
-  display: none;
-}
-
 .desktop {
   display: none;
 }

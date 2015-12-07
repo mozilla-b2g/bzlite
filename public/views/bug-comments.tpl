@@ -18,7 +18,11 @@
       </select>
     </div>
     <textarea placeholder="Reply..." id="commentInput"></textarea>
-    <input type="text" placeholder="Need More Information" id="needinfo" />
+    <input type="text" placeholder="Need More Information" id="needinfo"
+      list="usersList" />
     <input type="submit" value="Save Changes" disabled />
   </form>
+
+  <datalist id="usersList"></datalist>
+
 </div>
