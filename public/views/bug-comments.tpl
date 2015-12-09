@@ -19,7 +19,7 @@
     </div>
     <textarea placeholder="Reply..." id="commentInput"></textarea>
     <input type="text" placeholder="Need More Information" id="needinfo"
-      list="usersList" />
+      list="usersList" autocomplete="off" />
     <div id="needinfos"></div>
     <input type="submit" value="Save Changes" disabled />
   </form>
