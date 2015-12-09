@@ -15,8 +15,10 @@
         <option>RESOLVED - INVALID</option>
         <option>RESOLVED - WONTFIX</option>
         <option>RESOLVED - INCOMPLETE</option>
+        <option>RESOLVED - DUPLICATE</option>
       </select>
     </div>
+    <input type="number" placeholder="Enter Bug ID" id="duplicateId" hidden />
     <textarea placeholder="Reply..." id="commentInput"></textarea>
     <input type="text" placeholder="Need More Information" id="needinfo"
       list="usersList" autocomplete="off" />
