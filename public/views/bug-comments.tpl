@@ -7,16 +7,7 @@
     </div>
     <div class="row">
       <label>Status:</label>
-      <select id="status">
-        <option>UNCONFIRMED</option>
-        <option>NEW</option>
-        <option>ASSIGNED</option>
-        <option>RESOLVED - FIXED</option>
-        <option>RESOLVED - INVALID</option>
-        <option>RESOLVED - WONTFIX</option>
-        <option>RESOLVED - INCOMPLETE</option>
-        <option>RESOLVED - DUPLICATE</option>
-      </select>
+      <select id="status"></select>
     </div>
     <input type="number" placeholder="Enter Bug ID" id="duplicateId" hidden />
     <textarea placeholder="Reply..." id="commentInput"></textarea>
