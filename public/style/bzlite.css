@@ -959,3 +959,7 @@ div.cleanInput {
 div.cleanInput:hover {
   opacity: .75;
 }
+
+#needinfos input {
+  margin-right: 1rem;
+}

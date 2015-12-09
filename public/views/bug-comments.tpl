@@ -20,6 +20,7 @@
     <textarea placeholder="Reply..." id="commentInput"></textarea>
     <input type="text" placeholder="Need More Information" id="needinfo"
       list="usersList" />
+    <div id="needinfos"></div>
     <input type="submit" value="Save Changes" disabled />
   </form>
 
