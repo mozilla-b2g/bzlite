@@ -216,16 +216,13 @@ h5 {
   color: #00AACC;
 }
 
-#assigned {
-  border: 0;
-  padding: 0;
-  line-height: 2rem;
-  height: 2rem;
-  background: transparent;
-}
-
 #take {
   width: 10rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+#assigned {
+  border-right: 0;
 }
 
 #bugContent {
