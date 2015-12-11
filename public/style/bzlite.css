@@ -186,7 +186,7 @@ h5 {
   background-color: #b1f1ff;
 }
 
-#bugsWrapper, .bugWrapper {
+#dashboard, .bugWrapper {
   flex-grow: 1;
   overflow-y: scroll;
   overflow-x: hidden;
