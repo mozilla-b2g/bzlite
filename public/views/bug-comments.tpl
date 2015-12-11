@@ -1,4 +1,5 @@
 <div>
+  <div id="bugAttachments"></div>
   <ul id="comments"></ul>
   <form>
     Assigned:
