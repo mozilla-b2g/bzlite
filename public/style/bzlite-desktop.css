@@ -32,21 +32,6 @@
   background: #EEE;
 }
 
-.comments .comment {
-  background: #FFF;
-  border: 1px solid #CCC;
-  padding: 1rem;
-}
-
-.comments li {
-  border: none;
-  padding: 1rem;
-}
-
-.comments li:nth-child(2n) {
-  background-color: transparent;
-}
-
 #navigation {
   order: 0;
   flex-direction: column;
@@ -60,4 +45,8 @@
 
 .mobile {
   display: none !important;
+}
+
+.comments p.comment {
+  margin: 0 1rem 1rem 1rem;
 }

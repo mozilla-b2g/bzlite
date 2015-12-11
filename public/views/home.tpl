@@ -1,10 +1,11 @@
 <div id="wrapper">
 
   <div id="navigation" class="tabbar">
-    <a href="/" class="dashboardLink">Dashboard</a>
+    <a class="dashboardLink" href="/">Dashboard</a>
+    <span class="mobile" id="header">Dashboard</span>
     <a class="searchLink" href="/search/">Search</a>
-    <a class="profileLink" href="/profile/">Profile</a>
-    <a class="createLink" href="/create/">Create</a>
+    <a class="profileLink desktop" href="/profile/">Profile</a>
+    <a class="createLink desktop" href="/create/">Create</a>
   </div>
 
   <div id="content"></div>

@@ -1,5 +1,10 @@
 <div class="dashboard">
 
+  <div class="mobile tabbar" id="dashboardActions">
+    <a href="/create/">File a bug</a>
+    <a href="/profile/">Profile</a>
+  </div>
+
   <div id="bugsWrapper">
     <h3>Assigned</h3>
     <ul id="assignedBugs"></ul>

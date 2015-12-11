@@ -148,11 +148,11 @@ h5 {
   color: white;
 }
 
-[data-region="dashboard"] .dashboardLink,
-[data-region="search"] .searchLink,
-[data-region="create"] .createLink,
-[data-region="profile"] .profileLink {
-  color: #00caf2;
+[data-region="dashboard"] #navigation .dashboardLink,
+[data-region="search"] #navigation .searchLink,
+[data-region="create"] #navigation .createLink,
+[data-region="profile"] #navigation .profileLink {
+  color: #666;
 }
 /* GLOBAL NAV END */
 
@@ -212,7 +212,7 @@ h5 {
 #bugNav[data-section="details"] .detailsLink,
 #bugNav[data-section="attachments"] .attachLink,
 #bugNav[data-section="comments"] .commentsLink {
-  border-bottom: .3rem solid #00AACC;
+   border-bottom: .3rem solid #00AACC;
   color: #00AACC;
 }
 
@@ -322,7 +322,7 @@ header a {
 
 /* Main Layout*/
 .title {
- padding: 1.5rem;
+ padding: 1rem;
 }
 
 .details {
@@ -356,8 +356,7 @@ header a {
   overflow: hidden;
   border-bottom: 1px solid #DDD;
 }
-
-.bugs a:hover {
+first.bugs a:hover {
   background: #DDD;
 }
 
@@ -374,13 +373,23 @@ header a {
 }
 
 .comments li:first-child {
+  border-top: 1px solid #CCC;
   padding-top: 0;
 }
 
-.comments li {
-  background-color: white;
-  border-bottom: 1px solid #CCC;
-  padding: 1rem 1.5rem 1rem 1.5rem;
+.comments p.comment {
+  background: #FFF;
+  border: 1px solid #CCC;
+  margin: 0 0 1rem 0;
+}
+
+p.comment {
+  padding: 1rem;
+}
+
+.comments li.comment {
+  background: transparent;
+  border: none;
 }
 
 .bugs {
@@ -744,6 +753,7 @@ input[type=submit][disabled], input[type=button][disabled] {
   text-align: center;
   padding: 1rem;
   font-style: italic;
+  color: #CCC;
 }
 
 .profileContent {
@@ -922,16 +932,16 @@ input[type=search]:focus + .focus {
 }
 
 #navigation {
-  background: black;
-  order: 2;
+  background: #9ab0c0;
 }
 
-#navigation a:hover {
-  background: #333;
+#navigation a,
+#navigation span {
+  color: white;
 }
 
 .bugDetail, .bugDetail a {
-  font-size: 1.2rem;
+   font-size: 1.2rem;
 }
 
 .bugDetail {
@@ -960,4 +970,8 @@ div.cleanInput:hover {
 
 #needinfos input {
   margin-right: 1rem;
+}
+
+.header {
+  padding: 0 1rem;
 }
