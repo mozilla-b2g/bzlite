@@ -1,11 +1,5 @@
 <div>
 
-  <header>
-    <a class="headerBtn"></a>
-    <h2>File a Bug</h2>
-    <a class="headerBtn" id="submit">Submit</a>
-  </header>
-
   <form id="createBug">
     <div class="input">
       <input type="text" placeholder="Title" id="summary"
@@ -24,6 +18,8 @@
     <ul class="attachments"></ul>
 
     <datalist id="componentList"></datalist>
+
+    <input type="submit" class="btn" />
 
   </form>
 

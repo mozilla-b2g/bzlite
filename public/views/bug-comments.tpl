@@ -1,8 +1,9 @@
 <div>
   <ul id="comments"></ul>
   <form>
+    Assigned:
     <div class="row">
-      <div>Assigned:<br /><input type="text" id="assigned" /></div>
+      <input type="text" id="assigned" list="usersList" autocomplete="off" />
       <input type="button" value="Take Bug" id="take" class="btn sidebtn" />
     </div>
     <div class="row">
