@@ -356,7 +356,7 @@ header a {
   overflow: hidden;
   border-bottom: 1px solid #DDD;
 }
-first.bugs a:hover {
+.bugs a:hover {
   background: #DDD;
 }
 
