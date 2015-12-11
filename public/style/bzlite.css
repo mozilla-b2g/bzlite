@@ -378,12 +378,9 @@ header a {
 }
 
 .comments li {
+  background-color: white;
   border-bottom: 1px solid #CCC;
   padding: 1rem 1.5rem 1rem 1.5rem;
-}
-
-.comments li:nth-child(even) {
-  background-color: white;
 }
 
 .bugs {
