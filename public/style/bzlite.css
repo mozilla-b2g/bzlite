@@ -229,8 +229,13 @@ h5 {
   flex-grow: 1;
 }
 
+.attachmentView {
+  margin-top: 1rem;
+  border-top: .1rem solid #CCC;
+}
 .attachmentView li {
-  padding: .5rem 1rem;
+  padding: 1rem;
+  border-bottom: .1rem solid #CCC;
 }
 
 .attachmentView a {
@@ -361,11 +366,15 @@ header a {
 
 .comments div span {
   color: #999;
-  font-size: 1.2rem;
 }
 
 .comments p {
   white-space: pre-wrap;
+}
+
+.comments li:first-child {
+  border-top: 1px solid #CCC;
+  padding-top: 0;
 }
 
 .comments p.comment {
@@ -965,8 +974,4 @@ div.cleanInput:hover {
 
 .header {
   padding: 0 1rem;
-}
-
-#bugAttachments:not(empty) {
-  margin-bottom: 1rem;
 }
