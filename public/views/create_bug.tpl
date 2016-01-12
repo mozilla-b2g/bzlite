@@ -19,7 +19,7 @@
 
     <datalist id="componentList"></datalist>
 
-    <input type="submit" class="btn" />
+    <input type="submit" class="btn" id="create-bug" />
 
   </form>
 

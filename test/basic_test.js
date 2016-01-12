@@ -85,21 +85,23 @@ describe('Basic Tests', function() {
     this.timeout(0);
 
     return browser.title().then(function(title) {
-      assert.equal(title, 'Bugzilla Lite');
+      assert.equal(title, 'Login - Bugzilla Lite');
       return login();
 
       // Create a new bug
     }).then(function() {
-      return $('[href="/create/"]');
-    }).then(function(createLink) {
-      createLink.click();
+      return browser.get('http://127.0.0.1:3035/create/');
+    }).then(function() {
+    //   return $('[href="/create/"]');
+    // }).then(function(createLink) {
+    //   createLink.click();
       return $('#summary');
     }).then(function(summary) {
       summary.type('Bug Title');
       return $('#description');
     }).then(function(description) {
       description.type('Bug Description');
-      return $('#submit');
+      return $('#create-bug');
     }).then(function(submit) {
       submit.click();
       return $('.title');
@@ -116,9 +118,6 @@ describe('Basic Tests', function() {
       return $('input[type=submit]');
     }).then(function(submitBtn) {
       submitBtn.click();
-      return pause();
-    }).then(function() {
-      return browser.acceptAlert();
     });
 
   });
