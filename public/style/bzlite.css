@@ -372,24 +372,19 @@ header a {
   white-space: pre-wrap;
 }
 
-.comments li:first-child {
+li.comment {
   border-top: 1px solid #CCC;
-  padding-top: 0;
+  border-bottom: 1px solid #CCC;
+  margin: 0 1rem;
+  padding: 1rem 0;
 }
 
-.comments p.comment {
-  background: #FFF;
-  border: 1px solid #CCC;
-  margin: 0 0 1rem 0;
+li.comment + li.comment {
+  border-top: 0;
 }
 
-p.comment {
-  padding: 1rem;
-}
-
-.comments li.comment {
-  background: transparent;
-  border: none;
+li.comment .header {
+  margin-bottom: 1rem;
 }
 
 .bugs {
@@ -970,8 +965,4 @@ div.cleanInput:hover {
 
 #needinfos input {
   margin-right: 1rem;
-}
-
-.header {
-  padding: 0 1rem;
 }
