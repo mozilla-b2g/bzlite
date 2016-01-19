@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Wed Dec 09 2015 00:21:14 GMT-0500 (EST)
+# Tue Jan 19 2016 11:22:34 GMT+0000 (GMT)
 
 /activity.html
 /index.html
@@ -8,11 +8,12 @@ CACHE MANIFEST
 /js/.empty
 /js/bundle.js
 /views/attachment-row.tpl
+/views/bug-attachments.tpl
 /views/bug-comment.tpl
 /views/bug-comments.tpl
 /views/bug-details.tpl
-/views/bug.tpl
 /views/create_bug.tpl
+/views/bug.tpl
 /views/dashboard-row.tpl
 /views/dashboard.tpl
 /views/home.tpl
@@ -22,6 +23,7 @@ CACHE MANIFEST
 /views/search.tpl
 /views/view-attachment-row.tpl
 /style/bzlite-desktop.css
+/style/bzlite-mobile.css
 /style/bzlite.css
 /style/icons/add.png
 /style/icons/attach.png
@@ -32,6 +34,7 @@ CACHE MANIFEST
 /style/icons/bzlite_84.png
 /style/icons/checked.png
 /style/icons/close.png
+/style/icons/home.svg
 /style/icons/info.png
 /style/icons/loading.png
 /style/icons/noun_11757.svg
@@ -42,6 +45,7 @@ CACHE MANIFEST
 /style/icons/noun_56937_cc.svg
 /style/icons/noun_9529.svg
 /style/icons/remove.png
+/style/icons/search_white.svg
 /style/icons/user.png
 
 NETWORK:

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "TEST=1 npm run build && mocha test/*_test.js",
+    "test-unit": "mocha test/unit/",
+    "test-integration": "TEST=1 npm run build && mocha test/*_test.js",
+    "test": "npm run test-unit && npm run test-integration",
     "watch": "watchify index.js -t envify -o public/js/bundle.js -v",
     "build": "browserify index.js  -t envify > public/js/bundle.js",
     "build-manifest": "appcachegen public -o public/manifest.appcache",
@@ -29,6 +31,7 @@
     "page": "^1.6.1",
     "pouchdb": "^5.1.0",
     "selenium-standalone": "^4.1.0",
+    "should": "^8.1.1",
     "timeago": "^0.2.0",
     "tosource": "^1.0.0",
     "watchify": "^2.3.0",
