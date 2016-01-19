@@ -4,12 +4,10 @@
     <div class="input">
       <input type="text" placeholder="Title" id="summary"
              inputmode="latin-prose" x-inputmode="latin-prose" />
-      <div id="cleanSummary" class="cleanInput"></div>
     </div>
     <input type="text" id="component" value="Firefox OS - Gaia::Feedback" />
     <div class="input">
       <textarea placeholder="Description" id="description" ></textarea>
-      <div id="cleanDescription" class="cleanInput"></div>
     </div>
     <span class="btn-file attachBtn attach">
       <input type="file" multiple />
