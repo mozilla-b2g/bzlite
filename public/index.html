@@ -14,7 +14,235 @@
     <link rel="stylesheet" media="(max-width: 800px)" href="/style/bzlite-mobile.css">
   </head>
 
-  <body></body>
+  <body>
+
+    <div id="body"></div>
+
+    <template id="dashboard-row-tpl">
+      <a>
+        <span class="summary"></span>
+        <div class="row bugheader">
+          <span class="id"></span>
+          <span class="lastChanged"></span>
+        </div>
+        <div class="row bugheader">
+          <span class="flaguser"></span>
+          <span class="flagtype"></span>
+        </div>
+      </a>
+    </template>
+
+    <template id="bug-tpl">
+      <div class="bugPage">
+
+        <div class="bugWrapper">
+          <div class="progressWrapper"><div class="progress"></div></div>
+          <h3 class="title"></h3>
+          <div id="bugContent"></div>
+        </div>
+
+        <div class="tabbar" id="bugNav">
+          <a class="commentsLink" data-ctx-capture="true">Comments</a>
+          <a class="detailsLink" data-ctx-capture="true">Details</a>
+          <a class="attachLink" data-ctx-capture="true">Attachments</a>
+        </div>
+
+      </div>
+    </template>
+
+    <template id="bug-comments-tpl">
+      <div>
+        <ul id="comments"></ul>
+        <form>
+          Assigned:
+          <div class="row">
+            <input type="text" id="assigned" list="usersList" autocomplete="off" />
+            <input type="button" value="Take Bug" id="take" class="btn sidebtn" />
+          </div>
+          <div class="row">
+            <label>Status:</label>
+            <select id="status"></select>
+          </div>
+          <input type="number" placeholder="Enter Bug ID" id="duplicateId" hidden />
+          <textarea placeholder="Reply..." id="commentInput"></textarea>
+          <input type="text" placeholder="Need More Information" id="needinfo"
+                 list="usersList" autocomplete="off" />
+          <div id="needinfos"></div>
+          <input type="submit" value="Save Changes" disabled />
+        </form>
+
+        <datalist id="usersList"></datalist>
+
+      </div>
+    </template>
+
+    <template id="bug-comment-tpl">
+      <li class="comment">
+        <div class="header">
+          <span class="author"></span>
+          <span class="created"></span>
+        </div>
+        <p class="comment"></p>
+      </li>
+    </template>
+
+    <template id="dashboard-tpl">
+      <div class="dashboard">
+
+        <div class="mobile tabbar" id="dashboardActions">
+          <a href="/create/">File a bug</a>
+          <a href="/profile/">Profile</a>
+        </div>
+
+        <div id="bugsWrapper">
+          <h3>Assigned</h3>
+          <ul id="assignedBugs"></ul>
+
+          <h3>Flags Requested of You</h3>
+          <ul id="flaggedBugs"></ul>
+
+          <h3>Flags Requested by You</h3>
+          <ul id="flagBugs"></ul>
+        </div>
+      </div>
+    </template>
+
+    <template id="home-tpl">
+      <div id="wrapper">
+
+        <div id="navigation" class="tabbar">
+          <a class="dashboardLink" href="/">Dashboard</a>
+          <span class="mobile" id="header">Dashboard</span>
+          <a class="searchLink" href="/search/">Search</a>
+          <a class="profileLink desktop" href="/profile/">Profile</a>
+          <a class="createLink desktop" href="/create/">Create</a>
+        </div>
+
+        <div id="content"></div>
+
+        <div id="secondScreen" class="desktop"></div>
+
+        <div id="intro" class="dialog" hidden>
+          <div>
+            <h2>Did you know…</h2>
+            <span>On a Firefox OS device, pressing and holding the volume down and
+              volume up keys together will save the current system logs
+              and a screenshot.</span>
+            <button id="intro-submit">OK</button>
+          </div>
+        </div>
+
+      </div>
+    </template>
+
+    <template id="bug-details-tpl">
+      <div class="bugDetails">
+        <ul>
+          <li class="component"><label>Component</label><span></span></li>
+          <li class="filedon"><label>Filed On</label><span></span></li>
+          <li class="filedby"><label>Filed By</label><span></span></li>
+          <li class="lastmodified"><label>Last Modified</label><span></span></li>
+          <li class="status"><label>Status</label><span></span></li>
+          <li class="resolution"><label>Resolution</label><span></span></li>
+          <li class="dependson"><label>Depends On</label><span></span></li>
+          <li class="blocks"><label>Blocks</label><span></span></li>
+        </ul>
+      </div>
+    </template>
+
+
+    <template id="search-tpl">
+      <div>
+        <div id="search">
+          <div class="search">
+            <input placeholder="Search Bugzilla" type="search">
+            <div class="focus"></div>
+            <div id="cleanSearch" class="clenInput"></div>
+          </div>
+        </div>
+        <div class="bugs"></div>
+      </div>
+    </template>
+
+    <template id="attachment-row-tpl">
+      <li>
+        <span class="name"></span>
+        <span class="size"></span>
+        <a data-name="{name}" class="deleteAttachment" href=""></a>
+      </li>
+    </template>
+
+    <template id="create-bug-tpl">
+      <div>
+        <form id="createBug">
+          <div class="input">
+            <input type="text" placeholder="Title" id="summary"
+                   inputmode="latin-prose" x-inputmode="latin-prose" />
+          </div>
+          <input type="text" id="component" value="Firefox OS - Gaia::Feedback" />
+          <div class="input">
+            <textarea placeholder="Description" id="description" ></textarea>
+          </div>
+          <span class="btn-file attachBtn attach">
+            <input type="file" multiple />
+            <span>Add an Attachment</span>
+          </span>
+          <ul class="attachments"></ul>
+
+          <datalist id="componentList"></datalist>
+
+          <input type="submit" class="btn" id="create-bug" />
+
+        </form>
+
+        <div id="pickAttachments" class="hidden">
+
+          <header>
+            <h2>Select Files</h2>
+          </header>
+
+          <form id="pickAttachmentsForm">
+            <p>Select the files you want to attach to the bug</p>
+            <div id="attachments"></div>
+            <input type="submit" value="Attach" />
+          </form>
+
+        </div>
+      </div>
+
+    </template>
+
+    <template id="view-attachment-row-tpl">
+      <li>
+        <a class="name" target="_blank"></a>
+      </li>
+    </template>
+
+    <template id="profile-tpl">
+      <div>
+        <div class="profileContent">
+          <h4>Bugzilla Account:</h4>
+          <span class="accountName"></span>
+          <a href="/logout/" class="btn warning">Logout</a>
+        </div>
+      </div>
+    </template>
+
+    <template id="login-tpl">
+      <div>
+        <form id="login">
+          <input type="email" placeholder="Email Address" />
+          <input type="password" placeholder="Password" />
+          <input type="submit" value="Log in" />
+          <div class="row hidden">
+            <input type="button" class="btn warning" id="cancel" value="Cancel" />
+          </div>
+        </form>
+        <div class="bugzillaAuth">Or log in via <a id="bugzillaLink">Bugzilla</a></div>
+      </div>
+    </template>
+
+  </body>
 
   <script src="/js/bundle.js"></script>
 
