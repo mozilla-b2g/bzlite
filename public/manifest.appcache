@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Tue Jan 19 2016 11:22:34 GMT+0000 (GMT)
+# Fri Jan 22 2016 18:04:43 GMT+0000 (GMT)
 
 /activity.html
 /index.html
@@ -7,21 +7,6 @@ CACHE MANIFEST
 /install.html
 /js/.empty
 /js/bundle.js
-/views/attachment-row.tpl
-/views/bug-attachments.tpl
-/views/bug-comment.tpl
-/views/bug-comments.tpl
-/views/bug-details.tpl
-/views/create_bug.tpl
-/views/bug.tpl
-/views/dashboard-row.tpl
-/views/dashboard.tpl
-/views/home.tpl
-/views/login.tpl
-/views/pick_attachments.tpl
-/views/profile.tpl
-/views/search.tpl
-/views/view-attachment-row.tpl
 /style/bzlite-desktop.css
 /style/bzlite-mobile.css
 /style/bzlite.css
