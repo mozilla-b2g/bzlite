@@ -9,14 +9,12 @@
     "test": "npm run test-unit && npm run test-integration",
     "watch": "watchify index.js -t envify -o public/js/bundle.js -v",
     "build": "browserify index.js  -t envify > public/js/bundle.js",
-    "build-manifest": "appcachegen public -o public/manifest.appcache",
-    "dev": "npm run build-manifest && npm run watch & nodemon lib/server.js",
-    "start": "npm run build && npm run build-manifest && nodemon lib/server.js"
+    "dev": "npm run watch & nodemon lib/server.js",
+    "start": "npm run build && nodemon lib/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "appcachegen": "0.0.3",
     "body-parser": "^1.13.3",
     "browserify": "^8.1.3",
     "envify": "^3.3.1",
