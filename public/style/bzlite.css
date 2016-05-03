@@ -15,7 +15,6 @@ html, body, #body {
 body {
   margin: 0;
   color: #474747;
-  background: #F4F4F4;
 }
 
 body, input, a, textarea, button {
@@ -158,22 +157,22 @@ h5 {
 
 /* DASHBOARD START */
 .dashboard {
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .bugPage {
   display: flex;
-  height: 100%;
   flex-direction: column;
+  overflow: hidden;
+  position: relative;
 }
 
 [data-section="assigned"] .assigned,
 [data-section="flags"] .flags,
 [data-section="flagged"] .flagged,
 [data-section="filed"] .filed {
-  border-bottom: .3rem solid #00AACC;
+   border-bottom: .3rem solid #00AACC;
   color: #00AACC;
 }
 

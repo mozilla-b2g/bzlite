@@ -1,34 +1,13 @@
-.dashboardLink,
-.searchLink {
-  width: 4rem;
-  flex-grow: 0;
-  overflow: hidden;
-  text-indent: -999px;
+#navigation {
+  order: 5;
 }
 
 .searchLink {
-  background: url(/style/icons/search_white.svg) no-repeat center;
-  background-size: 50%;
+  /* background: url(/style/icons/search_white.svg) no-repeat center; */
+  /* background-size: 50%; */
 }
 
 .dashboardLink {
-  background: url(/style/icons/noun_56937_cc.svg) no-repeat center;
-  background-size: 30%;
+  /* background: url(/style/icons/noun_56937_cc.svg) no-repeat center; */
+  /* background-size: 30%; */
 }
-
-#bugsWrapper h3:first-child {
-  margin-top: 0;
-}
-
-#dashboardActions {
-  justify-content: flex-end;
-}
-#dashboardActions a {
-  margin: 1rem;
-  color: #999;
-  padding: .5rem;
-  border-radius: 1rem;
-  font-size: 1.2rem;
-  border: 2px solid rgba(0, 170, 204, .3);
-}
-
