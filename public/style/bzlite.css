@@ -157,9 +157,15 @@ h5 {
 /* GLOBAL NAV END */
 
 /* DASHBOARD START */
-.dashboard, .bugPage {
+.dashboard {
   height: 100%;
   display: flex;
+  flex-direction: column;
+}
+
+.bugPage {
+  display: flex;
+  height: 100%;
   flex-direction: column;
 }
 
@@ -186,15 +192,15 @@ h5 {
   background-color: #b1f1ff;
 }
 
-#dashboard, .bugWrapper {
+#dashboard {
   flex-grow: 1;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 .bugWrapper {
-  position: relative;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
 }
 
@@ -927,6 +933,7 @@ input[type=search]:focus + .focus {
 }
 
 #navigation {
+  flex-shrink: 0;
   background: #9ab0c0;
 }
 
