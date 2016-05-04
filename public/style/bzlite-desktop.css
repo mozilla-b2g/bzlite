@@ -43,6 +43,14 @@
   text-align: right;
 }
 
+[data-region="dashboard"] #navigation .dashboardLink,
+[data-region="search"] #navigation .searchLink,
+[data-region="create"] #navigation .createLink,
+[data-region="profile"] #navigation .profileLink {
+  border-bottom: 3px solid transparent;
+  color: #00AACC;
+}
+
 .mobile {
   display: none !important;
 }

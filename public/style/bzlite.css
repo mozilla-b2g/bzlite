@@ -147,12 +147,24 @@ h5 {
   color: white;
 }
 
+#navigation a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
+}
+
 [data-region="dashboard"] #navigation .dashboardLink,
 [data-region="search"] #navigation .searchLink,
 [data-region="create"] #navigation .createLink,
 [data-region="profile"] #navigation .profileLink {
-  color: #666;
+  border-bottom: 3px solid #00AACC;
 }
+
+#navigation a:hover {
+  color: #00AACC;
+}
+
 /* GLOBAL NAV END */
 
 /* DASHBOARD START */
@@ -172,7 +184,7 @@ h5 {
 [data-section="flags"] .flags,
 [data-section="flagged"] .flagged,
 [data-section="filed"] .filed {
-   border-bottom: .3rem solid #00AACC;
+  border-bottom: .3rem solid #00AACC;
   color: #00AACC;
 }
 
@@ -217,7 +229,7 @@ h5 {
 #bugNav[data-section="details"] .detailsLink,
 #bugNav[data-section="attachments"] .attachLink,
 #bugNav[data-section="comments"] .commentsLink {
-   border-bottom: .3rem solid #00AACC;
+  border-bottom: .3rem solid #00AACC;
   color: #00AACC;
 }
 
@@ -429,7 +441,8 @@ header h2 {
 }
 
 .bugheader {
-  color: #BBB;
+  color: #8899a6;
+  font-size: 13px;
 }
 
 .dashboard .btn {
@@ -933,11 +946,12 @@ input[type=search]:focus + .focus {
 
 #navigation {
   flex-shrink: 0;
-  background: #9ab0c0;
+  background: black;
 }
 
 #navigation a,
 #navigation span {
+  transition: all .15s ease-in-out;
   color: white;
 }
 
