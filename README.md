@@ -15,21 +15,31 @@ From a local checkout of the bzlite repository:
 A local copy of Bugzilla will now be running at http://127.0.0.1:3000 and using
 the api @ https://bugzilla.mozilla.org/rest.
 
- * PORT=1234 - Run on a custom port
+ * PORT=1234 - Run the bzlite site on a custom port
  * BZ_URL='http://...' - Run against a custom bugzilla
- * TEST=1 - Shorthand for BZ_URL='https://bugzilla-dev.allizom.org/' PORT=3001 npm run dev. Convenient for a testing.
 
-If you run a test version, you can either ask for an account
-in irc://irc.mozilla.org/#bmo or use
+Installing a test Bugzilla
+--------------------------
 
-    username: dale+bzlite@arandomurl.com
-    password: eU3uBeZzamm4
+You can use docker to install and run a test version of bugzilla
+
+I use https://github.com/dklawren/docker-bugzilla-bmo, to get up and running first [install docker](https://docs.docker.com/engine/installation/) then run
+
+    $ docker run -d -t --name bmo --hostname bmo --publish 8080:80 --publish 2222:22 dklawren/webtools-bmo-bugzilla
+
+You will find Bugzilla running @ http://192.168.99.100:8080/bmo/ (or similiar, run `docker-machine env default` to find the IP). Use
+
+    $ BZ_URL=http://192.168.99.100:8080/bmo/rest/ npm run dev
+
+To test against that url, you can use the following credentials to login:
+
+    username: admin@mozilla.bugs
+    password: password
 
 Running Bugzilla Lite Tests
 ---------------------------
 
-   $ npm test
-
+    $ npm test
 
 Contributing to Bugzilla Lite
 -----------------------------
